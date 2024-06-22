@@ -1,5 +1,4 @@
 <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
-{{ $product }}
     @csrf
     <input type="text" name="" id="">
     <div>
