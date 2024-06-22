@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Laravel with Vite</title>
+    @viteReactRefresh
+    @vite(['resources/js/app.jsx', 'resources/scss/style.scss'])
 </head>
 <body>
-    <div id="bundeena-store" class="bundeena-store"> hello</div>
-    
+    <div id="bundeena-store"></div>
 </body>
 </html>
