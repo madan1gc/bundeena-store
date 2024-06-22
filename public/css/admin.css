@@ -34,11 +34,18 @@ li {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 button,
-.button {
+.primary-button {
   background-color: #336699;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Poppins", sans-serif;
-  padding: 16px 20px;
+  padding: 12px 24px;
   border: none;
   color: #ffffff;
   border-radius: 4px;
@@ -46,9 +53,13 @@ button,
   transition: opacity 0.3s ease-in-out;
 }
 button:hover,
-.button:hover {
+.primary-button:hover {
   cursor: pointer;
   opacity: 0.7;
+}
+button.create,
+.primary-button.create {
+  margin-bottom: 24px;
 }
 
 input {
@@ -81,21 +92,58 @@ form button {
   color: red;
 }
 
-.login-page {
+.login-page,
+.create-page,
+.edit-page {
   display: flex;
   justify-content: center;
-  margin-top: clamp(80px, 12vw, 250px);
+  margin-top: 50px;
 }
-.login-page .login-title {
+.login-page .login-title,
+.create-page .login-title,
+.edit-page .login-title {
   text-align: center;
   margin-bottom: 30px;
 }
-.login-page .wrapper {
+.login-page .wrapper,
+.create-page .wrapper,
+.edit-page .wrapper {
   background-color: #F0FFFF;
   border: 1px solid #DDDDDD;
   border-radius: 4px;
   padding: 50px;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 32px;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 12px 8px;
+}
+table .description {
+  width: 28%;
+}
+table tr:nth-child(even) {
+  background-color: #F0FFFF;
+}
+
+.edit {
+  display: inline-flex;
+  gap: 16px;
 }
 
 /*# sourceMappingURL=admin.css.map */

@@ -48,11 +48,18 @@ li {
     margin: 0 auto;
 }
 
+a {
+    text-decoration: none;
+}
+
 button,
-.button {
+.primary-button {
     background-color: $primary-color;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-family: $font-family;
-    padding: 16px 20px;
+    padding: 12px 24px;
     border: none;
     color: $white-color;
     border-radius: 4px;
@@ -62,6 +69,10 @@ button,
     &:hover {
         cursor: pointer;
         opacity: 0.7;
+    }
+
+    &.create {
+        margin-bottom: 24px;
     }
 }
 
@@ -94,15 +105,17 @@ form {
 
 // login
 
-.alert.alert-danger{
+.alert.alert-danger {
     margin-bottom: 32px;
     color: red;
 }
 
-.login-page {
+.login-page,
+.create-page,
+.edit-page {
     display: flex;
     justify-content: center;
-    margin-top: clamp(80px, 12vw, 250px);
+    margin-top: 50px;
 
     .login-title {
         text-align: center;
@@ -116,5 +129,44 @@ form {
         padding: 50px;
         box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
     }
+}
+
+
+// header 
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin-bottom: 32px;
+    border-bottom: 1px solid $border-color;
+}
+
+// table
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 12px 8px;
+    }
+
+    .description {
+        width: 28%;
+    }
+
+    tr:nth-child(even) {
+        background-color: $accent-color-2;
+    }
+}
+
+.edit {
+    display: inline-flex;
+    gap: 16px;
 
 }
