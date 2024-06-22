@@ -1,6 +1,5 @@
 <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
-    <input type="text" name="" id="">
     <div>
         <label>Price</label>
         <input type="text" name="price">
@@ -16,6 +15,10 @@
     <div>
         <label>Image</label>
         <input type="file" name="image" >
+    </div>
+    <div>
+        <label>Category</label>
+        <input type="text" name="category" >
     </div>
     <button>Submit</button>
 </form>

@@ -20,10 +20,13 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
+       
         $data = [
             'price' => $request->price,
             'description' => $request->description,
             'date' => $request->date,
+            'category' => $request->category,
+            'publish' => false,
         ];
         $imageName=null;
         if ($request->hasFile('image')) {
@@ -57,6 +60,7 @@ class ProductController extends Controller
             'price' => $request->price,
             'description' => $request->description,
             'date' => $request->date,
+            'category' => $request->category,
         ];
         $imageName=null;
         if ($request->hasFile('image')) {
@@ -72,7 +76,18 @@ class ProductController extends Controller
         $product->update($data);
         return redirect()->route('product');
         
+    }
 
+    public function publish($id){
+        $product = ProductModel::find($id);
+        if($product->publish == 1){
+            $product->publish = 0;
+            $product->save();
+            return redirect()->route('product');
+        }
+        $product->publish = 1;
+        $product->save();
+        return redirect()->route('product');
     }
 
     

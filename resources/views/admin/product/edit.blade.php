@@ -17,5 +17,9 @@
         <label>Image</label>
         <input type="file" name="image" >
     </div>
+    <div>
+        <label>Category</label>
+        <input type="text" name="category" value="{{ $product->category }}">
+    </div>
     <button>Submit</button>
 </form>

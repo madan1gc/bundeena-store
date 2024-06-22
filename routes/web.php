@@ -30,6 +30,7 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
     Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
     Route::post('/product/update', [ProductController::class, 'update'])->name('product.update');
+    Route::post('/product/publish/{id}', [ProductController::class, 'publish'])->name('product.publish');
 });
 
 
