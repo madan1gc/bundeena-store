@@ -3,7 +3,9 @@
     "type": "module",
     "scripts": {
         "start": "vite",
-        "build": "vite build"
+        "build": "vite build",
+        "sass": "sass resources/views/admin/scss/admin.scss public/css/admin.css",
+        "watch": "sass --watch resources/views/admin/scss/admin.scss:public/css/admin.css"
     },
     "devDependencies": {
         "@babel/preset-react": "^7.24.7",

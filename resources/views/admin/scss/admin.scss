@@ -1,0 +1,35 @@
+$primary-color: #336699;
+$secondary-color: #CCCCCC;
+$font-color: #333333;
+$heading-color: #0A0908;
+$accent-color: #FF6600;
+$white-color: #ffffff;
+$black-color: #000000;
+
+
+body {
+    font-size: 18px;
+    line-height: 1.5;
+    color: $font-color;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: inherit;
+}
+
+
+// login
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    margin: 200px 0;
+
+    .wrapper {
+        padding: 24px;
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+    }
+
+}
