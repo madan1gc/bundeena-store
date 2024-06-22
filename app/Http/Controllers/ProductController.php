@@ -10,12 +10,12 @@ class ProductController extends Controller
     public function index()
     {
         $products = ProductModel::all();
-        return view('admin.product.index',compact('products'));
+        return view('admin.dashboard.index',compact('products'));
     }
 
     public function create()
     {
-        return view('admin.product.create');
+        return view('admin.dashboard.create');
     }
 
     public function store(Request $request)
@@ -51,7 +51,7 @@ class ProductController extends Controller
 
     public function edit($id){
         $product = ProductModel::find($id);
-        return view('admin.product.edit',compact('product'));
+        return view('admin.dashboard.edit',compact('product'));
     }
 
     public function update(Request $request){

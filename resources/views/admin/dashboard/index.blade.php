@@ -11,6 +11,7 @@
 <body>
     <table>
         <a href="{{ route('product.create') }}">Create product</a>
+        <a href="{{route('logout')}}">logout</a>
         <tr>
             <td>Price</td>
             <td>Desc</td>
