@@ -9,3 +9,23 @@ body{
     padding: 0 15px;
     margin: 0 auto;
 }
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-menu{
+    display: flex;
+    gap: 30px;
+}
+
+header{
+    background-color: #fff000;
+    padding: 16px 0;
+}
