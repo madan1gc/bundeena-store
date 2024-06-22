@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.5;
   color: #333333;
   font-family: "Poppins", sans-serif;
@@ -16,20 +16,33 @@ h6 {
   font-family: "Open Sans", sans-serif;
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 * {
   padding: 0;
   margin: 0;
   color: inherit;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 button,
 .button {
   background-color: #336699;
+  font-family: "Poppins", sans-serif;
   padding: 16px 20px;
   border: none;
   color: #ffffff;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 16px;
   transition: opacity 0.3s ease-in-out;
 }
 button:hover,
@@ -63,6 +76,11 @@ form button {
   margin-top: 30px;
 }
 
+.alert.alert-danger {
+  margin-bottom: 32px;
+  color: red;
+}
+
 .login-page {
   display: flex;
   justify-content: center;
@@ -70,10 +88,12 @@ form button {
 }
 .login-page .login-title {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 .login-page .wrapper {
   background-color: #F0FFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
   padding: 50px;
   box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
 }

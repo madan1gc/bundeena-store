@@ -4,13 +4,10 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
-
-
 </head>
 
 <body>
     <div class="login-page">
-
         <div class="wrapper">
             <h1 class="login-title">Login</h1>
             @if ($errors->any())
