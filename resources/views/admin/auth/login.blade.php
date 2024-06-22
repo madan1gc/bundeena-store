@@ -25,8 +25,8 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="input-wrapper">
-                    <label>Email</label>
-                    <input type="email" name="email" value="{{ old('email') }}">
+                    <label>User Name</label>
+                    <input type="text" name="email" >
                 </div>
                 <div class="input-wrapper">
                     <label>Password</label>

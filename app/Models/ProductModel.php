@@ -11,4 +11,12 @@ class ProductModel extends Model
     protected $table = 'products';
     protected $fillable = ['id','price','description','date','image','category','publish'];
 
+    public function getImage(){
+        if($this->image){
+            return asset('images/product/' . $this->image);
+        }
+        return false;
+        
+    }
+
 }
