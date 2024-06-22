@@ -9,8 +9,12 @@
         <input type="text" name="description" >
     </div>
     <div>
-        <label>Date</label>
-        <input type="date" name="date" >
+        <label>From Date</label>
+        <input type="date" name="from_date">
+    </div>
+    <div>
+        <label>TO Date</label>
+        <input type="date" name="to_date" >
     </div>
     <div>
         <label>Image</label>

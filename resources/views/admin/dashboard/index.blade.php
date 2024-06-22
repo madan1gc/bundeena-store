@@ -15,7 +15,8 @@
         <tr>
             <td>Price</td>
             <td>Desc</td>
-            <td>date</td>
+            <td>from date</td>
+            <td>TO date</td>
             <td>Category</td>
             <td>Image</td>
             <td>Action</td>
@@ -24,7 +25,8 @@
             <tr>
                 <td>{{ $product->price }}</td>
                 <td>{{ $product->description }}</td>
-                <td>{{ $product->date }}</td>
+                <td>{{ $product->from_date }}</td>
+                <td>{{ $product->to_date }}</td>
                 <td>{{ $product->category }}</td>
                 <td><img src="{{ asset('images/product/' . $product->image) }}" style="height: 100px;width: 100px;"></td>
                 <td>

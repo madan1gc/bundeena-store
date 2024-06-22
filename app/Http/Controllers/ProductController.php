@@ -24,7 +24,8 @@ class ProductController extends Controller
         $data = [
             'price' => $request->price,
             'description' => $request->description,
-            'date' => $request->date,
+            'from_date' => $request->from_date,
+            'to_date' => $request->to_date,
             'category' => $request->category,
             'publish' => false,
         ];
@@ -36,7 +37,7 @@ class ProductController extends Controller
         }
         $data['image'] = $imageName;
         ProductModel::create($data);
-        return redirect()->route('product');
+        return redirect()->route('dashboard');
     }
 
     public function delete($id){
@@ -46,7 +47,7 @@ class ProductController extends Controller
             File::delete($imagePath);
         }
         $data->delete();
-        return redirect()->route('product');
+        return redirect()->route('dashboard');
     }
 
     public function edit($id){
@@ -59,7 +60,8 @@ class ProductController extends Controller
         $data = [
             'price' => $request->price,
             'description' => $request->description,
-            'date' => $request->date,
+            'from_date' => $request->from_date,
+            'to_date' => $request->to_date,
             'category' => $request->category,
         ];
         $imageName=null;
@@ -74,7 +76,7 @@ class ProductController extends Controller
             $data['image'] = $imageName;
         }
         $product->update($data);
-        return redirect()->route('product');
+        return redirect()->route('dashboard');
         
     }
 
@@ -83,11 +85,11 @@ class ProductController extends Controller
         if($product->publish == 1){
             $product->publish = 0;
             $product->save();
-            return redirect()->route('product');
+            return redirect()->route('dashboard');
         }
         $product->publish = 1;
         $product->save();
-        return redirect()->route('product');
+        return redirect()->route('dashboard');
     }
 
     

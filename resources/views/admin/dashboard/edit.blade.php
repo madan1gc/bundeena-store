@@ -10,8 +10,12 @@
         <input type="text" name="description" value="{{ $product->description }}">
     </div>
     <div>
-        <label>Date</label>
-        <input type="date" name="date" value="{{ $product->date }}">
+        <label>From Date</label>
+        <input type="date" name="from_date" value="{{ $product->from_date }}">
+    </div>
+    <div>
+        <label>TO Date</label>
+        <input type="date" name="to_date" value="{{ $product->to_date }}">
     </div>
     <div>
         <label>Image</label>

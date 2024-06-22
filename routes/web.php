@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ProductController;
 
@@ -23,8 +22,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'loginPost']);
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::middleware(['admin'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/dashboard', [ProductController::class, 'index'])->name('product');
+    Route::get('/dashboard', [ProductController::class, 'index'])->name('dashboard');
     Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
     Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
     Route::post('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');

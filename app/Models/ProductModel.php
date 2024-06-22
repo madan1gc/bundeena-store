@@ -9,7 +9,7 @@ class ProductModel extends Model
 {
     use HasFactory;
     protected $table = 'products';
-    protected $fillable = ['id','price','description','date','image','category','publish'];
+    protected $fillable = ['id','price','description','from_date','to_date','image','category','publish'];
 
     public function getImage(){
         if($this->image){

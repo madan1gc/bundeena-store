@@ -15,7 +15,8 @@ class ApiController extends Controller
                 'price' => $product->price,
                 'description' => $product->description,
                 'image' => $product->getImage(),
-                'date' => $product->date,
+                'from_date' => $product->from_date,
+                'to_date' => $product->to_date,
                 'category' => $product->category,
                 'publish' =>$product->publish,
 
