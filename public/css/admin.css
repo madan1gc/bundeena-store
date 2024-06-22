@@ -10,14 +10,53 @@ body {
   color: inherit;
 }
 
+button,
+.button {
+  background-color: #336699;
+  padding: 16px 20px;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: opacity 0.3s ease-in-out;
+}
+button:hover,
+.button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+input {
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 1px solid #DDDDDD;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+form .input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .login-page {
   display: flex;
   justify-content: center;
-  margin: 200px 0;
+  margin: 250px 0 0;
+}
+.login-page .login-title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 .login-page .wrapper {
-  padding: 24px;
-  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: #F0FFFF;
+  padding: 50px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=admin.css.map */

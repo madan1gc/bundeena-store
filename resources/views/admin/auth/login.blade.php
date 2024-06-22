@@ -12,7 +12,7 @@
     <div class="login-page">
 
         <div class="wrapper">
-            <h1>Login</h1>
+            <h1 class="login-title">Login</h1>
             @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -24,11 +24,11 @@
             @endif
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-                <div>
+                <div class="input-wrapper">
                     <label>Email</label>
                     <input type="email" name="email" value="{{ old('email') }}">
                 </div>
-                <div>
+                <div class="input-wrapper">
                     <label>Password</label>
                     <input type="password" name="password">
                 </div>
