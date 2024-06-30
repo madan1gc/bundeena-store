@@ -1,5 +1,5 @@
 import React from 'react';
-import Carousel from '../../components/Carousel';
+import { Card, Carousel } from '../../components';
 import { bannerImage } from '../../components/images'
 
 const Home = () => {
@@ -20,9 +20,30 @@ const Home = () => {
         },
     ];
 
+    const offerCard = [
+        {
+            title: "Eco-Friendly Fuels",
+            description: "Cadbury Medium Bar 30g - 60g varieties",
+            date: "Offer valid from: 30/05/2024 - 03/07/2024",
+            image: bannerImage,
+        },
+        {
+            title: "Eco-Friendly Fuels",
+            description: "Cadbury Medium Bar 30g - 60g varieties",
+            date: "Offer valid from: 30/05/2024 - 03/07/2024",
+            image: bannerImage,
+        },
+        {
+            title: "Eco-Friendly Fuels",
+            description: "Cadbury Medium Bar 30g - 60g varieties",
+            date: "Offer valid from: 30/05/2024 - 03/07/2024",
+            image: bannerImage,
+        },
+    ]
+
     return (
         < >
-            <div className="slider-banner">
+            <section className="slider-banner">
                 <div className="container">
                     <Carousel
                         sliderContent={sliderContent}
@@ -30,7 +51,18 @@ const Home = () => {
                         slidesToShow={1}
                     />
                 </div>
-            </div>
+            </section>
+            <section className='offer'>
+                <div className="container">
+                    <div className="section-header">
+                        <h2>This month Offer's</h2>
+                        <p>Every month you can find different offers and deals at Coles Express and Reddy Express stores</p>
+                    </div>
+                    <div className="card-wrapper">
+                        <Card cardItem={offerCard} />
+                    </div>
+                </div>
+            </section>
         </>
     );
 };
