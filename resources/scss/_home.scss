@@ -2,6 +2,10 @@
     color: $white-color;
     background-color: $secondary-color;
     padding: 80px 0;
+
+    h2{
+        color: $white-color;
+    }
 }
 
 .section-header {
@@ -27,7 +31,7 @@
         box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
         padding: 8px;
         border-radius: 4px;
-        transition: 0.23s ease-in-out;
+        transition: transform 0.3s ease-in-out;
 
         .text {
             padding: 16px;

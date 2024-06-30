@@ -19,7 +19,7 @@ const Carousel = ({ sliderContent, style, slidesToShow }) => {
         {sliderContent.map((content, index) => (
           <div className="slider-content" key={index}>
             <div className="text">
-              <h1>{content.title}</h1>
+              <h2>{content.title}</h2>
               <p>{content.description}</p>
               <a className="button primary-button" href={content.link}>{content.buttonText}</a>
             </div>
