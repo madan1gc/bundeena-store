@@ -20,6 +20,10 @@ h6 {
     color: inherit;
 }
 
+img {
+    max-width: 100%;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
@@ -39,10 +43,88 @@ a {
 .nav-menu {
     display: flex;
     gap: 30px;
+
+    li a {
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
 }
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family;
+    padding: 12px 24px;
+    border: none;
+    color: $white-color;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &.primary-button {
+        background-color: $primary-color;
+    }
+
+    &.secondary-button {
+        background-color: $secondary-color;
+        color: $font-color;
+    }
+}
+
 
 header {
     background-color: $primary-color;
     padding: 16px 0;
     color: $white-color;
+
+    .header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+// slider
+
+button.slick-arrow {
+    background: $primary-color;
+    border-radius: 100%;
+}
+
+.slider-banner {
+    .slick-dots {
+        bottom: -50px;
+    }
+}
+
+.slider-container {
+    .slider-content {
+        display: flex !important;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            grid-gap: 20px;
+            align-items: flex-start;
+            flex: 1;
+        }
+
+        .image {
+            flex: 1;
+        }
+    }
+
+    &.vertical .slider-content {
+        justify-content: space-between;
+        align-items: center;
+        gap: clamp(50px, 5vw , 80px);
+    }
 }

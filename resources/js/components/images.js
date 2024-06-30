@@ -1,0 +1,1 @@
+export {default as bannerImage} from '../../images/banner-image.jpg'
