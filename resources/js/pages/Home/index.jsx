@@ -1,6 +1,6 @@
 import React from 'react';
-import { Card, Carousel, SectionHeader } from '../../components';
-import { bannerImage } from '../../components/images'
+import { Card, Carousel, SectionHeader, CTA } from '../../components';
+import { bannerImage, cta } from '../../components/images'
 
 const Home = () => {
     const sliderContent = [
@@ -41,6 +41,29 @@ const Home = () => {
         },
     ]
 
+    const categoryList = [
+        {
+            link: "#",
+            image: bannerImage,
+            name: "Fuel"
+        },
+        {
+            link: "#",
+            image: bannerImage,
+            name: "Coffee"
+        },
+        {
+            link: "#",
+            image: bannerImage,
+            name: "Food"
+        },
+        {
+            link: "#",
+            image: bannerImage,
+            name: "Service"
+        }
+    ]
+
     return (
         < >
             <section className="slider-banner">
@@ -70,26 +93,28 @@ const Home = () => {
                     />
                     <div className="category-wrapper">
                         <div className="grid column-4">
-                            <a href='#' className="category">
-                                <img src={bannerImage} />
-                                <span>Fuel</span>
-                            </a>
-                            <a href='#' className="category">
-                                <img src={bannerImage} />
-                                <span>Coffee</span>
-                            </a>
-                            <a href='#' className="category">
-                                <img src={bannerImage} />
-                                <span>Food</span>
-                            </a>
-                            <a href='#' className="category">
-                                <img src={bannerImage} />
-                                <span>Service</span>
-                            </a>
+                            {
+                                categoryList.map((category, index) => (
+                                    <a href={category.link} className="category" key={index}>
+                                        <img src={category.image} />
+                                        <span>{category.name}</span>
+                                    </a>
+                                ))
+                            }
                         </div>
                     </div>
                 </div>
-
+            </section>
+            <section className='cta'>
+                <div className="container">
+                    <CTA
+                        image={cta}
+                        heading="Service station near you"
+                        description="Use our store finder to find your closest Coles Express and Reddy Express service stations"
+                        link="#"
+                        buttontext="Get in Touch"
+                    />
+                </div>
             </section>
         </>
     );
