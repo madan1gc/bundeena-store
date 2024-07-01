@@ -64,6 +64,24 @@ const Home = () => {
         }
     ]
 
+    const serviceList = [
+        {
+            title: "Car Wash",
+            description: "Cadbury Medium Bar 30g - 60g varieties",
+            image: cta,
+        },
+        {
+            title: "Car Wash",
+            description: "Cadbury Medium Bar 30g - 60g varieties",
+            image: cta,
+        },
+        {
+            title: "Car Wash",
+            description: "Cadbury Medium Bar 30g - 60g varieties",
+            image: cta,
+        },
+    ]
+
     return (
         < >
             <section className="slider-banner">
@@ -114,6 +132,16 @@ const Home = () => {
                         link="#"
                         buttontext="Get in Touch"
                     />
+                </div>
+            </section>
+            <section className='services'>
+                <div className="container">
+                    <SectionHeader
+                        heading="Services"
+                    />
+                    <div className="card-wrapper">
+                        <Card cardItem={serviceList} />
+                    </div>
                 </div>
             </section>
         </>

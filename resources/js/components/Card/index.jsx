@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({cardItem}) => {
+const Card = ({ cardItem }) => {
     return (
         cardItem.map((item, index) => (
             <div className="card" key={index}>
@@ -8,9 +8,9 @@ const Card = ({cardItem}) => {
                     <img src={item.image} alt="" />
                 </div>
                 <div className="text">
-                    <p>{item.description}</p>
                     <h4>{item.title}</h4>
-                    <span>{item.date}</span>
+                    <p>{item.description}</p>
+                    {item.date && <span>{item.date}</span>}
                 </div>
             </div>
         ))
