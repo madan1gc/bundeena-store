@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Carousel } from '../../components';
+import { Card, Carousel, SectionHeader } from '../../components';
 import { bannerImage } from '../../components/images'
 
 const Home = () => {
@@ -54,14 +54,42 @@ const Home = () => {
             </section>
             <section className='offer'>
                 <div className="container">
-                    <div className="section-header">
-                        <h2>This month Offer's</h2>
-                        <p>Every month you can find different offers and deals at Coles Express and Reddy Express stores</p>
-                    </div>
+                    <SectionHeader
+                        heading="This month Offer's"
+                        description="Every month you can find different offers and deals at Coles Express and Reddy Express stores"
+                    />
                     <div className="card-wrapper">
                         <Card cardItem={offerCard} />
                     </div>
                 </div>
+            </section>
+            <section className='category accent-background'>
+                <div className="container">
+                    <SectionHeader
+                        heading="Search by category"
+                    />
+                    <div className="category-wrapper">
+                        <div className="grid column-4">
+                            <a href='#' className="category">
+                                <img src={bannerImage} />
+                                <span>Fuel</span>
+                            </a>
+                            <a href='#' className="category">
+                                <img src={bannerImage} />
+                                <span>Coffee</span>
+                            </a>
+                            <a href='#' className="category">
+                                <img src={bannerImage} />
+                                <span>Food</span>
+                            </a>
+                            <a href='#' className="category">
+                                <img src={bannerImage} />
+                                <span>Service</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </>
     );

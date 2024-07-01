@@ -161,3 +161,11 @@ header {
         gap: clamp(50px, 5vw, 80px);
     }
 }
+
+.grid {
+    display: grid;
+}
+
+.column-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
