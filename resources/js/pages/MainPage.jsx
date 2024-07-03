@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header } from '../components'
+import { Header, Footer } from '../components'
 import Home from './Home'
 
 const MainPage = () => {
@@ -7,6 +7,7 @@ const MainPage = () => {
     <>
       <Header />
       <Home />
+      <Footer />
     </>
   )
 }

@@ -65,7 +65,25 @@ const Home = () => {
                     <div className="card-wrapper">
                         <Card cardItem={serviceList} />
                     </div>
+                    <div className="button-wrapper">
+                        <a className='button primary-button' href="#">View all Services</a>
+                    </div>
                 </div>
+            </section>
+            <section className='blog accent-background'>
+                <div className="container">
+                    <SectionHeader
+                        heading="News and Events"
+                        description="Latest updates and in-depth analysis on current events."
+                    />
+                    <div className="card-wrapper">
+                        <Card cardItem={serviceList} />
+                    </div>
+                    <div className="button-wrapper">
+                        <a className='button primary-button' href="#">View all Articles</a>
+                    </div>
+                </div>
+
             </section>
         </>
     );

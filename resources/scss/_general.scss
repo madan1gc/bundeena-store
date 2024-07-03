@@ -135,6 +135,20 @@ header {
 .slider-banner {
     .slick-dots {
         bottom: -50px;
+
+        li button {
+            &:before {
+                opacity: 1;
+                color: $secondary-color;
+            }
+        }
+
+        li.slick-active button {
+            &:before {
+                opacity: 0.7;
+                color: #fff;
+            }
+        }
     }
 }
 
@@ -168,4 +182,43 @@ header {
 
 .column-4 {
     grid-template-columns: repeat(4, 1fr);
+}
+
+// footer
+
+footer {
+    background-color: $primary-color;
+    color: $white-color;
+    padding: 80px 0 0;
+
+    h3 {
+        color: $white-color;
+    }
+
+    a {
+        transition: 0.3s ease-in-out;
+    }
+
+    a:hover {
+        opacity: 0.7;
+    }
+
+    .top-footer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 100px;
+        padding-bottom: 50px;
+    }
+
+    .bottom-footer {
+        display: flex;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        justify-content: space-between;
+        padding: 24px 0;
+
+        .terms ul {
+            display: flex;
+            gap: 20px;
+        }
+    }
 }
