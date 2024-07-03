@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Carousel, SectionHeader, CTA } from '../../components';
-import { bannerImage, cta } from '../../components/images'
+import { cta } from '../../components/images'
 import { sliderContent, offerCard, categoryList, serviceList } from '../../components/data'
 
 const Home = () => {

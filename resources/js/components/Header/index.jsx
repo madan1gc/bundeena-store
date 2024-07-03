@@ -6,7 +6,9 @@ const Header = () => {
             <div className='container'>
                 <div className="header-wrapper">
                     <div className="logo">
-                        <h1>Bundeena Store</h1>
+                        <h1>
+                            <Link to="/">Bundeena Store</Link>
+                        </h1>
                     </div>
                     <ul className='nav-menu'>
                         <li>
