@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -10,21 +10,21 @@ const Header = () => {
                     </div>
                     <ul className='nav-menu'>
                         <li>
-                            <a href="">Home</a>
+                            <Link to="/">Home</Link>
                         </li>
                         <li>
-                            <a href="">About</a>
+                            <Link to="/offers">Offers</Link>
                         </li>
                         <li>
-                            <a href="">Services</a>
+                            <Link to="">Services</Link>
                         </li>
                         <li>
-                            <a href="">Contact</a>
+                            <Link to="">Contact</Link>
                         </li>
                     </ul>
                     <div className="button-wrapper">
                         <li>
-                            <a className='button secondary-button' href="">Contact</a>
+                            <Link className='button secondary-button' to="">Contact</Link>
                         </li>
                     </div>
                 </div>
