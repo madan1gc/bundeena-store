@@ -6,7 +6,7 @@ export const sliderContent = [
         description: "Discover the power of high-quality fuels that keep your engines running longer and cleaner. Join the thousands of satisfied customers who trust us for their fuel needs.",
         buttonText: "Learn More",
         link: "#",
-        image: bannerImage,
+        image: cta,
     },
     {
         title: "Eco-Friendly Fuels",
