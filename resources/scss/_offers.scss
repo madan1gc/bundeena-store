@@ -9,5 +9,26 @@
             color: inherit;
         }
     }
+}
 
+.offer {
+    .react-tabs__tab-list {
+        border: none;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 56px;
+
+        .react-tabs__tab {
+            border: 1px solid $border-color;
+            border-radius: 4px;
+            padding: 8px 32px;
+            box-shadow: none;
+
+            &.react-tabs__tab--selected {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+    }
 }

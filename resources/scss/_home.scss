@@ -1,19 +1,19 @@
 .slider-banner {
     color: $white-color;
-    background-image: url('../images/cta-bg.jpg');
+    background-image: url("../images/cta-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 80px 0;
     position: relative;
 
-    .slider-container{
+    .slider-container {
         position: relative;
         z-index: 2;
     }
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -48,7 +48,6 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
 
     .card {
         background-color: $white-color;
@@ -99,11 +98,10 @@ section {
                 background: $secondary-color;
                 padding: 4px 20px;
                 border-radius: 8px 0 8px 0;
-
             }
 
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -128,7 +126,7 @@ section {
 
 // cta
 .cta {
-    background-image: url('../images/cta-bg.jpg');
+    background-image: url("../images/cta-bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -162,7 +160,7 @@ section {
     }
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -171,7 +169,6 @@ section {
         z-index: 1;
         background: rgba(0, 0, 0, 0.6);
     }
-
 }
 
 // button
@@ -179,4 +176,18 @@ section {
 section .button-wrapper {
     text-align: center;
     margin-top: 56px;
+}
+
+.woocommerce-photo-reviews-form {
+    width: 100%;
+}
+
+.woocommerce-photo-reviews-form label{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 600;
+}
+.wcpr_review_form_wrapper .wcpr_image_upload_button.button,
+.wcpr_review_form_wrapper .form-submit .submit{
+    padding: 16px 32px;
 }

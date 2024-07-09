@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, Carousel, SectionHeader, CTA } from '../../components';
 import { cta } from '../../components/images'
 import { sliderContent, offerCard, categoryList, serviceList } from '../../components/data'
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const Home = () => {
 
@@ -22,10 +24,29 @@ const Home = () => {
                         heading="This month Offer's"
                         description="Every month you can find different offers and deals at Coles Express and Reddy Express stores"
                     />
-                    <div className="card-wrapper">
-                        <Card cardItem={offerCard} />
+                    <Tabs>
+                        <TabList>
+                            <Tab>Offer 1</Tab>
+                            <Tab>Offer 2</Tab>
+                        </TabList>
+
+                        <TabPanel>
+                            <div className="card-wrapper">
+                                <Card cardItem={offerCard} />
+                            </div>
+                        </TabPanel>
+                        <TabPanel>
+                            <div className="card-wrapper">
+                                <Card cardItem={serviceList} />
+                            </div>
+                        </TabPanel>
+                    </Tabs>
+
+                    <div className="button-wrapper">
+                        <a className='button primary-button' href="#">View all Offers</a>
                     </div>
                 </div>
+
             </section>
             <section className='category accent-background'>
                 <div className="container">
