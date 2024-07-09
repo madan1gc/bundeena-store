@@ -31,5 +31,8 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/product/publish/{id}', [ProductController::class, 'publish'])->name('product.publish');
 });
 
+Route::get('/{any}', function () {
+    return view('index');
+})->where('any', '.*');
 
 

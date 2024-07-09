@@ -1,8 +1,29 @@
-.offers-page {
+.inner-page {
     .banner {
         text-align: center;
-        background-color: $secondary-color;
+        background-image: url('../images/cta-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
         color: $white-color;
+        position: relative;
+
+        .text-wrapper {
+            position: relative;
+            z-index: 2;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.7);
+        }
 
         h1 {
             margin-bottom: 16px;

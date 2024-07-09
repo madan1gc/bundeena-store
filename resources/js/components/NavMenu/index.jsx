@@ -11,7 +11,7 @@ const NavMenu = () => {
                 <Link to="/offers">Offers</Link>
             </li>
             <li className='has-submenu' >
-                <Link className='has-icon' to="">What's in store <Icon icon="downArrow" /> </Link>
+                <Link className='has-icon' to="#">What's in store <Icon icon="downArrow" /> </Link>
                 <ul className='submenu'>
                     <li><Link to="/allstore">All </Link></li>
                     <li><Link to="">Sandwiches & Wraps</Link></li>
@@ -21,7 +21,7 @@ const NavMenu = () => {
                 </ul>
             </li>
             <li>
-                <Link to="">Services</Link>
+                <Link to="#">Services</Link>
             </li>
             <li>
                 <Link to="">Fuels</Link>

@@ -28,17 +28,17 @@ h2 {
 
 h3 {
     font-size: 32px;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 h4 {
     font-size: 26px;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 h5 {
     font-size: 22px;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 h6 {
@@ -80,6 +80,8 @@ a {
 
     li a {
         transition: 0.3s ease-in-out;
+        display: inline-block;
+        width: 100%;
 
         &:hover {
             color: $accent-color;

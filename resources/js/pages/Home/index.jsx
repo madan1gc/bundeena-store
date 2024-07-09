@@ -106,7 +106,6 @@ const Home = () => {
                         <a className='button primary-button' href="#">View all Articles</a>
                     </div>
                 </div>
-
             </section>
         </>
     );

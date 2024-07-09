@@ -6,15 +6,17 @@ import 'react-tabs/style/react-tabs.css';
 
 const Offers = () => {
     return (
-        <div className="offers-page" >
+        <div className="inner-page" >
             <section className="banner">
                 <div className="container">
-                    <h1>
-                        This month's offers and deals at Coles Express
-                    </h1>
-                    <p>
-                        At Coles Express and Reddy Express you can find monthly offers, deals and discounts on a variety of different convenience groceries. From grocery essentials to combos and meal deals, there is a range of special offers available to suit your taste. Discover which offers you can find at your nearest Coles Express and Reddy Express.
-                    </p>
+                    <div className="text-wrapper">
+                        <h1>
+                            This month's offers and deals at Coles Express
+                        </h1>
+                        <p>
+                            At Coles Express and Reddy Express you can find monthly offers, deals and discounts on a variety of different convenience groceries. From grocery essentials to combos and meal deals, there is a range of special offers available to suit your taste. Discover which offers you can find at your nearest Coles Express and Reddy Express.
+                        </p>
+                    </div>
                 </div >
             </section>
             <section className='offer'>
@@ -40,10 +42,7 @@ const Offers = () => {
                             </div>
                         </TabPanel>
                     </Tabs>
-
-
                 </div>
-
             </section>
             <section className='cta'>
                 <div className="container">
