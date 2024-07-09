@@ -8,7 +8,7 @@ const Carousel = ({ sliderContent, style, slidesToShow }) => {
     arrows: false,
     infinite: true,
     speed: 500,
-    autoplay:true,
+    autoplay: true,
     slidesToShow: slidesToShow,
     slidesToScroll: 1,
   };
@@ -21,7 +21,7 @@ const Carousel = ({ sliderContent, style, slidesToShow }) => {
             <div className="text">
               <h2>{content.title}</h2>
               <p>{content.description}</p>
-              <a className="button primary-button" href={content.link}>{content.buttonText}</a>
+              {content.buttonText && <a className="button primary-button" href={content.link}>{content.buttonText}</a>}
             </div>
             <div className="image">
               <img src={content.image} alt={content.title} />

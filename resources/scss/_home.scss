@@ -69,6 +69,8 @@ section {
     }
 }
 
+
+
 .category-wrapper {
     .grid {
         gap: 30px;
@@ -182,12 +184,39 @@ section .button-wrapper {
     width: 100%;
 }
 
-.woocommerce-photo-reviews-form label{
+.woocommerce-photo-reviews-form label {
     font-size: 18px;
     line-height: 1.5;
     font-weight: 600;
 }
+
 .wcpr_review_form_wrapper .wcpr_image_upload_button.button,
-.wcpr_review_form_wrapper .form-submit .submit{
+.wcpr_review_form_wrapper .form-submit .submit {
     padding: 16px 32px;
+}
+
+
+// services 
+
+.slider-container.horizontal {
+    .slider-content {
+        flex-direction: column;
+        margin-bottom: 26px;
+
+        .image {
+            order: -1;
+            margin-bottom: 16px;
+        }
+        .text{
+            gap: 8px;
+            h2{
+                font-size: 24px;
+                line-height: 1.5;
+            }
+        }
+    }
+    .slick-track{
+        display: flex;
+        gap: 30px;
+    }
 }

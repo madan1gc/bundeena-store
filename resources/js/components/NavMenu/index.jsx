@@ -13,7 +13,7 @@ const NavMenu = () => {
             <li className='has-submenu' >
                 <Link className='has-icon' to="">What's in store <Icon icon="downArrow" /> </Link>
                 <ul className='submenu'>
-                    <li><Link to="">All </Link></li>
+                    <li><Link to="/allstore">All </Link></li>
                     <li><Link to="">Sandwiches & Wraps</Link></li>
                     <li><Link to="">Coffee</Link></li>
                     <li><Link to="">Bakery</Link></li>

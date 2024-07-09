@@ -17,7 +17,7 @@
                     Bundeen Store
                 </h1>
             </div>
-            <a class="primary-button" {{route('logout')}}">Logout</a>
+            <a class="primary-button"  href="{{route('logout')}}">Logout</a>
         </header>
         <div class="data-list">
             <a class="primary-button create" href="{{ route('product.create') }}">Create New Product</a>

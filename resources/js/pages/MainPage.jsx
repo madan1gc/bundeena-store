@@ -1,23 +1,19 @@
-import React from 'react'
-import { Header, Footer } from '../components'
-import Home from './Home'
-import Offers from './Offers'
+import { Header, Footer } from '../components';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import routes from './routes';
 
 const MainPage = () => {
   return (
-    <>
-      <Router>
-        <Header />
+    <Router>
+      <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/offers' element={<Offers />} />
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
         </Routes>
-        <Footer />
-      </Router>
+      <Footer />
+    </Router>
+  );
+};
 
-    </>
-  )
-}
-
-export default MainPage
+export default MainPage;

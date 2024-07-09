@@ -83,9 +83,11 @@ const Home = () => {
                     <SectionHeader
                         heading="Services"
                     />
-                    <div className="card-wrapper">
-                        <Card cardItem={serviceList} />
-                    </div>
+                    <Carousel
+                        sliderContent={serviceList}
+                        style="horizontal"
+                        slidesToShow={3}
+                    />
                     <div className="button-wrapper">
                         <a className='button primary-button' href="#">View all Services</a>
                     </div>
