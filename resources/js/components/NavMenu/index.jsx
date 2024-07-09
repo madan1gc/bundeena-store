@@ -14,23 +14,23 @@ const NavMenu = () => {
                 <Link className='has-icon' to="#">What's in store <Icon icon="downArrow" /> </Link>
                 <ul className='submenu'>
                     <li><Link to="/allstore">All </Link></li>
-                    <li><Link to="">Sandwiches & Wraps</Link></li>
-                    <li><Link to="">Coffee</Link></li>
-                    <li><Link to="">Bakery</Link></li>
-                    <li><Link to="">Hot Food</Link></li>
+                    <li><Link to="#">Sandwiches & Wraps</Link></li>
+                    <li><Link to="#">Coffee</Link></li>
+                    <li><Link to="#">Bakery</Link></li>
+                    <li><Link to="#">Hot Food</Link></li>
                 </ul>
             </li>
             <li>
                 <Link to="#">Services</Link>
             </li>
             <li>
-                <Link to="">Fuels</Link>
+                <Link to="#">Fuels</Link>
             </li>
             <li>
-                <Link to="">News & Events</Link>
+                <Link to="#">News & Events</Link>
             </li>
             <li>
-                <Link to="">Partners</Link>
+                <Link to="#">Partners</Link>
             </li>
         </ul>
     )

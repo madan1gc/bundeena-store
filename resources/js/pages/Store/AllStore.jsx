@@ -1,5 +1,5 @@
 import { SectionHeader, Card, CTA } from "../../components"
-import { offerCard, serviceList } from '../../components/data'
+import { serviceList } from '../../components/data'
 import { cta } from '../../components/images'
 
 const AllStore = () => {

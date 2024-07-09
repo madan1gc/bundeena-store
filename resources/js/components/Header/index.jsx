@@ -14,7 +14,7 @@ const Header = () => {
                     </div>
                     <NavMenu />
                     <div className="button-wrapper">
-                        <Link className='button secondary-button' to="">Contact</Link>
+                        <Link className='button secondary-button' to="#">Contact</Link>
                     </div>
                 </div>
 
