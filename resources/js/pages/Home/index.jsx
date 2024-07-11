@@ -15,6 +15,8 @@ const Home = () => {
         const apiUrl = '/api/product';
         axios.get(apiUrl)
             .then(response => {
+
+                console.log(response.data);
                 const dataList = [];
                 Object.keys(response.data).forEach(categoryName => {
                     const category = response.data[categoryName];
@@ -23,9 +25,11 @@ const Home = () => {
                             title: categoryName,
                             description: item.description,
                             price: item.price,
-                            date: item.price,
+                            date: item.from_date,
+                            end_date: item.to_date,
                             image: item.image,
-                            categoryName: categoryName
+                            categoryName: categoryName,
+                            status: item.publish
                         });
                     });
                 });
@@ -36,8 +40,9 @@ const Home = () => {
             });
     }, []);
 
-    const fuel = data.filter(item => item.categoryName === "fuel");
-    const categoryOne = data.filter(item => item.categoryName === "category 1");
+
+    const fuel = data.filter(item => item.categoryName === "fuel" && item.status == true);
+    const categoryOne = data.filter(item => item.categoryName === "category 1" && item.status == true);
 
     return (
         < >

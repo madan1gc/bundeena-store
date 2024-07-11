@@ -10,7 +10,9 @@ const Card = ({ cardItem }) => {
                 <div className="text">
                     <h4>{item.title}</h4>
                     <p>{item.description}</p>
-                    {item.date && <span>{item.date}</span>}
+                    {item.price && <h3>{item.price}</h3>}
+                    {(item.date && item.end_date) && <span>{item.date} - {item.end_date}</span>}
+
                 </div>
             </div>
         ))
