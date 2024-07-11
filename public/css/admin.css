@@ -146,4 +146,8 @@ table tr:nth-child(even) {
   gap: 16px;
 }
 
+.data-list {
+  margin: 30px 0 50px;
+}
+
 /*# sourceMappingURL=admin.css.map */

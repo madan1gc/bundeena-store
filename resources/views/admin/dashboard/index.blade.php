@@ -25,9 +25,9 @@
                 <tr>
                     <th>Image</th>
                     <th>Price</th>
-                    <th>Desc</th>
-                    <th>from date</th>
-                    <th>TO date</th>
+                    <th>Desciption</th>
+                    <th>From date</th>
+                    <th>To date</th>
                     <th>Category</th>
                     <th>Action</th>
                 </tr>
@@ -43,17 +43,17 @@
                         <div class="edit">
                             <form method="POST" action="{{ route('product.delete', ['id' => $product->id]) }}">
                                 @csrf
-                                <button type="submit">Delete</button>
+                                <button class="delete" type="submit">Delete</button>
                             </form>
                             <form method="Get" action="{{ route('product.edit', ['id' => $product->id]) }}">
-                                <button type="submit">Edit</button>
+                                <button class="edit" type="submit">Edit</button>
                             </form>
                             <form method="POST" action="{{ route('product.publish', ['id' => $product->id]) }}">
                                 @csrf
                                 @if ($product->publish == 0)
-                                <button type="submit">Publish</button>
+                                <button class="publish" type="submit">Publish</button>
                                 @else
-                                <button type="submit">Unpublish</button>
+                                <button class="unpublish" type="submit">Unpublish</button>
                                 @endif
                             </form>
                         </div>
