@@ -1,11 +1,43 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Carousel, SectionHeader, CTA } from '../../components';
 import { cta } from '../../components/images'
 import { sliderContent, offerCard, categoryList, serviceList } from '../../components/data'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
+import axios from 'axios';
+
 const Home = () => {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const apiUrl = '/api/product';
+        axios.get(apiUrl)
+            .then(response => {
+                const dataList = [];
+                Object.keys(response.data).forEach(categoryName => {
+                    const category = response.data[categoryName];
+                    category.forEach(item => {
+                        dataList.push({
+                            title: categoryName,
+                            description: item.description,
+                            price: item.price,
+                            date: item.price,
+                            image: item.image,
+                            categoryName: categoryName
+                        });
+                    });
+                });
+                setData(dataList);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }, []);
+
+    const fuel = data.filter(item => item.categoryName === "fuel");
+    const categoryOne = data.filter(item => item.categoryName === "category 1");
 
     return (
         < >
@@ -32,12 +64,12 @@ const Home = () => {
 
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={offerCard} />
+                                <Card cardItem={fuel} />
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={serviceList} />
+                                <Card cardItem={categoryOne} />
                             </div>
                         </TabPanel>
                     </Tabs>

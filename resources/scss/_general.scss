@@ -77,6 +77,15 @@ a {
 .nav-menu {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     li a {
         transition: 0.3s ease-in-out;
@@ -269,6 +278,14 @@ footer {
         grid-template-columns: repeat(3, 1fr);
         gap: 100px;
         padding-bottom: 50px;
+
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .bottom-footer {

@@ -49,6 +49,14 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .card {
         background-color: $white-color;
         box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.2);
@@ -207,15 +215,18 @@ section .button-wrapper {
             order: -1;
             margin-bottom: 16px;
         }
-        .text{
+
+        .text {
             gap: 8px;
-            h2{
+
+            h2 {
                 font-size: 24px;
                 line-height: 1.5;
             }
         }
     }
-    .slick-track{
+
+    .slick-track {
         display: flex;
         gap: 30px;
     }
