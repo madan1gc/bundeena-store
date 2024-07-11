@@ -9,20 +9,18 @@ class ApiController extends Controller
 {
     public function index(){
         $products = ProductModel::all();
-        $data = [];
-        foreach($products as $product){
-            $data[] = [
+        $data = $products->map(function($product) {
+            return [
                 'price' => $product->price,
                 'description' => $product->description,
                 'image' => $product->getImage(),
                 'from_date' => $product->from_date,
                 'to_date' => $product->to_date,
                 'category' => $product->category,
-                'publish' =>$product->publish,
-
+                'publish' => $product->publish,
             ];
-
-        }
+        });
+        
         return response(['title'=>'Success','message'=>'Product Data','data'=>$data],200);
        
 

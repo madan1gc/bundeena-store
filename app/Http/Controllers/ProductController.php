@@ -32,7 +32,7 @@ class ProductController extends Controller
         $imageName=null;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = time() . '_' . $image->getClientOriginalName();
+            $imageName = 'img'. '_' . time(). rand(1,1000);
             $image->move(public_path('images/product'), $imageName);
         }
         $data['image'] = $imageName;
