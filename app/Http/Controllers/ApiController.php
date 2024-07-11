@@ -21,7 +21,7 @@ class ApiController extends Controller
             ];
         });
         
-        return response(['title'=>'Success','message'=>'Product Data','data'=>$data],200);
+        return response($data,200);
        
 
     }
