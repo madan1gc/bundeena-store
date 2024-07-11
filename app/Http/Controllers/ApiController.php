@@ -8,20 +8,22 @@ use App\Models\ProductModel;
 class ApiController extends Controller
 {
     public function index(){
-        $products = ProductModel::all();
-        $data = $products->map(function($product) {
-            return [
-                'price' => $product->price,
-                'description' => $product->description,
-                'image' => $product->getImage(),
-                'from_date' => $product->from_date,
-                'to_date' => $product->to_date,
-                'category' => $product->category,
-                'publish' => $product->publish,
-            ];
+        $products = ProductModel::all()->groupBy('category');
+        $data = $products->map(function($products) {
+            return $products->map(function($product) {
+                return [
+                    'price' => $product->price,
+                    'description' => $product->description,
+                    'image' => $product->getImage(),
+                    'from_date' => $product->from_date,
+                    'to_date' => $product->to_date,
+                    'publish' => $product->publish,
+                ];
+            });
         });
+    
         
-        return response($data,200);
+        return response($data);
        
 
     }
