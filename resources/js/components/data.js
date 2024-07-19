@@ -78,3 +78,90 @@ export const serviceList = [
         image: cta,
     },
 ];
+export const serviceListTwo = [
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+    },
+];
+
+export const carwash = [
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+        list: [
+            "Pre-wash",
+            "Soft cloth wash and shampoo",
+            "Underbody wash ",
+            "Wheel Wash",
+            "Foam Bath",
+            "Spot free rinse",
+        ]
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+        list: [
+            "Pre-wash",
+            "Soft cloth wash and shampoo",
+            "Underbody wash ",
+            "Wheel Wash",
+            "Foam Bath",
+            "Spot free rinse",
+        ]
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+        list: [
+            "Pre-wash",
+            "Soft cloth wash and shampoo",
+            "Underbody wash ",
+            "Wheel Wash",
+            "Foam Bath",
+            "Spot free rinse",
+        ]
+    },
+    {
+        title: "Car Wash",
+        description: "Cadbury Medium Bar 30g - 60g varieties",
+        image: cta,
+        list: [
+            "Pre-wash",
+            "Soft cloth wash and shampoo",
+            "Underbody wash ",
+            "Wheel Wash",
+            "Foam Bath",
+            "Spot free rinse",
+        ]
+    },
+]

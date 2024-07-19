@@ -21,7 +21,7 @@ const NavMenu = () => {
                 </ul>
             </li>
             <li>
-                <Link to="#">Services</Link>
+                <Link to="/services">Services</Link>
             </li>
             <li>
                 <Link to="#">Fuels</Link>
