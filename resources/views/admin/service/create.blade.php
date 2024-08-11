@@ -12,7 +12,7 @@
     <a href="{{ route('dashboard') }}"> Go Back</a>
     <div class="create-page">
         <div class="wrapper">
-            <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('service.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="input-wrapper">
                     <label>Price</label>
@@ -21,14 +21,6 @@
                 <div class="input-wrapper">
                     <label>Description</label>
                     <input type="text" name="description">
-                </div>
-                <div class="input-wrapper">
-                    <label>From Date</label>
-                    <input type="date" name="from_date">
-                </div>
-                <div class="input-wrapper">
-                    <label>TO Date</label>
-                    <input type="date" name="to_date">
                 </div>
                 <div class="input-wrapper">
                     <label>Image</label>

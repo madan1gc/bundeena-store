@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <a href="{{ route('dashboard') }}"> Go Back</a>
     <div class="edit-page">
         <div class="wrapper">
             <form action="{{ route('product.update') }}" method="POST" enctype="multipart/form-data">

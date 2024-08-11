@@ -12,23 +12,16 @@
     <a href="{{ route('dashboard') }}"> Go Back</a>
     <div class="create-page">
         <div class="wrapper">
-            <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('fuel.update') }}" method="POST" enctype="multipart/form-data">
                 @csrf
+                <input type="text" name="id" value="{{$data->id}}" hidden>
                 <div class="input-wrapper">
                     <label>Price</label>
-                    <input type="text" name="price">
+                    <input type="text" name="price" value="{{$data->price}}">
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>
-                    <input type="text" name="description">
-                </div>
-                <div class="input-wrapper">
-                    <label>From Date</label>
-                    <input type="date" name="from_date">
-                </div>
-                <div class="input-wrapper">
-                    <label>TO Date</label>
-                    <input type="date" name="to_date">
+                    <input type="text" name="description" value="{{$data->description}}">
                 </div>
                 <div class="input-wrapper">
                     <label>Image</label>
@@ -36,7 +29,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Category</label>
-                    <input type="text" name="category">
+                    <input type="text" name="category" value="{{$data->category}}">
                 </div>
                 <button>Submit</button>
             </form>

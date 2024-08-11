@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
+use Yajra\DataTables\DataTables;
+
 
 class ProductController extends Controller
 {
@@ -11,6 +13,11 @@ class ProductController extends Controller
     {
         $products = ProductModel::all();
         return view('admin.dashboard.index',compact('products'));
+    }
+    public function getData()
+    {
+        $products = ProductModel::all(['id', 'image', 'price', 'description', 'from_date', 'to_date', 'category', 'publish']);
+        return DataTables::of($products)->make(true);
     }
 
     public function create()
@@ -32,7 +39,7 @@ class ProductController extends Controller
         $imageName=null;
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $imageName = 'img'. '_' . time(). rand(1,1000);
+            $imageName = 'img'. '_' . time(). rand(1,1000).  '.' .$image->getClientOriginalExtension();
             $image->move(public_path('images/product'), $imageName);
         }
         $data['image'] = $imageName;
@@ -71,7 +78,7 @@ class ProductController extends Controller
                 File::delete($imagePath);
             }
             $image = $request->file('image');
-            $imageName = time() . '_' . $image->getClientOriginalName();
+            $imageName = 'img'. '_' . time(). rand(1,1000).  '.' .$image->getClientOriginalExtension();
             $image->move(public_path('images/product'), $imageName);
             $data['image'] = $imageName;
         }
