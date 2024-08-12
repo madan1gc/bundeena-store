@@ -20,7 +20,7 @@
             <a class="primary-button" href="{{route('logout')}}">Logout</a>
         </header>
 
-        <div class="wrapper">
+        <div class="table-wrapper">
             <div class="sidebar">
                 <a class="primary-button outline active" href="{{route('dashboard')}}"> offer</a>
                 <a class="primary-button outline" href="{{route('store')}}"> store</a>
