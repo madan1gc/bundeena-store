@@ -1,4 +1,6 @@
 import { bannerImage, cta } from '../components/images';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export const sliderContent = [
     {
@@ -78,6 +80,7 @@ export const serviceList = [
         image: cta,
     },
 ];
+
 export const serviceListTwo = [
     {
         title: "Car Wash",
@@ -165,3 +168,20 @@ export const carwash = [
         ]
     },
 ]
+
+export const useProductData = () => {
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        const apiUrl = '/api/product';
+        axios.get(apiUrl)
+            .then(response => {
+                setData(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching product data:', error);
+            });
+    }, []);
+
+    return data;
+};

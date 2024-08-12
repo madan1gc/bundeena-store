@@ -1,48 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Carousel, SectionHeader, CTA } from '../../components';
 import { cta } from '../../components/images'
-import { sliderContent, offerCard, categoryList, serviceList } from '../../components/data'
+import { sliderContent, categoryList, serviceList, useProductData } from '../../components/data'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
-import axios from 'axios';
+// import axios from 'axios';
 
 const Home = () => {
 
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        const apiUrl = '/api/product';
-        axios.get(apiUrl)
-            .then(response => {
-
-                console.log(response.data);
-                const dataList = [];
-                Object.keys(response.data).forEach(categoryName => {
-                    const category = response.data[categoryName];
-                    category.forEach(item => {
-                        dataList.push({
-                            title: categoryName,
-                            description: item.description,
-                            price: item.price,
-                            date: item.from_date,
-                            end_date: item.to_date,
-                            image: item.image,
-                            categoryName: categoryName,
-                            status: item.publish
-                        });
-                    });
-                });
-                setData(dataList);
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    }, []);
-
-
-    const fuel = data.filter(item => item.categoryName === "fuel" && item.status == true);
-    const categoryOne = data.filter(item => item.categoryName === "category 1" && item.status == true);
+    const data = useProductData();
 
     return (
         < >
@@ -69,12 +36,12 @@ const Home = () => {
 
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={fuel} />
+                                <Card cardItem={data.fuel || []} />
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={categoryOne} />
+                                <Card cardItem={data.specials || []} />
                             </div>
                         </TabPanel>
                     </Tabs>
