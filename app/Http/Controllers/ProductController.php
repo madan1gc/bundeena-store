@@ -5,13 +5,15 @@ use App\Models\ProductModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Yajra\DataTables\DataTables;
+use Illuminate\Support\Str;
+
 
 
 class ProductController extends Controller
 {
     public function index()
     {
-        $products = ProductModel::all();
+        $products = ProductModel::orderBy('created_at', 'desc')->get();
         return view('admin.dashboard.index',compact('products'));
     }
     public function getData()

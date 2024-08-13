@@ -10,7 +10,7 @@ class StoreController extends Controller
 {
 
     public function index(){
-        $products = StoreModel::all();
+        $products = StoreModel::orderBy('created_at', 'desc')->get();
         return view('admin.store.index',compact('products'));
     }
     public function create()

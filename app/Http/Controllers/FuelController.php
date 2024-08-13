@@ -10,7 +10,7 @@ class FuelController extends Controller
 {
 
     public function index(){
-        $products = Fuel::all();
+        $products = Fuel::orderBy('created_at', 'desc')->get();
         return view('admin.fuel.index',compact('products'));
     }
     public function create()
