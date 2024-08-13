@@ -11,64 +11,26 @@ use App\Models\Fuel;
 class ApiController extends Controller
 {
     public function index(){
-        $products = ProductModel::all()->groupBy('category');
-        $data = $products->map(function($products) {
-            return $products->map(function($product) {
-                return [
-                    'price' => $product->price,
-                    'description' => $product->description,
-                    'image' => $product->getImage(),
-                    'from_date' => $product->from_date,
-                    'to_date' => $product->to_date,
-                    'publish' => $product->publish,
-                ];
-            });
-        });
-        return response($data);
-    }
+        $offers = ProductModel::all()->groupBy('category');
+        $formattedOffers =  formatOffer($offers);
+        
+        $services = Service::all()->groupBy('category');
+        $formattedServices =  formattedService($services);
+        
+        $stores = StoreModel::all()->groupBy('category');
+        $formattedStores =  formattedStore($stores);
 
-    public function service(){
-        $products = Service::all()->groupBy('category');
-        $data = $products->map(function($products) {
-            return $products->map(function($product) {
-                return [
-                    'price' => $product->price,
-                    'description' => $product->description,
-                    'image' => $product->getImage(),
-                    'publish' => $product->publish,
-                ];
-            });
-        });
-        return response($data);
-    }
+        $fuels = Fuel::all()->groupBy('category');
+        $formattedFuels =  formattedFuel($fuels);
+        
+        $responseData = [
+            'offers' => $formattedOffers,
+            'services' => $formattedServices,
+            'stores' => $formattedStores,
+            'fuels' => $formattedFuels,
+        ];
 
-    public function store(){
-        $products = StoreModel::all()->groupBy('category');
-        $data = $products->map(function($products) {
-            return $products->map(function($product) {
-                return [
-                    'price' => $product->price,
-                    'description' => $product->description,
-                    'image' => $product->getImage(),
-                    'publish' => $product->publish,
-                ];
-            });
-        });
-        return response($data);
-    }
+        return $responseData;
 
-    public function fuel(){
-        $products = Fuel::all()->groupBy('category');
-        $data = $products->map(function($products) {
-            return $products->map(function($product) {
-                return [
-                    'price' => $product->price,
-                    'description' => $product->description,
-                    'image' => $product->getImage(),
-                    'publish' => $product->publish,
-                ];
-            });
-        });
-        return response($data);
     }
 }

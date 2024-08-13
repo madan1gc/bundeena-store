@@ -16,6 +16,4 @@ use App\Http\Controllers\ApiController;
 */
 
 Route::get('/product', [ApiController::class, 'index']);
-Route::get('/store', [ApiController::class, 'store']);
-Route::get('/service', [ApiController::class, 'service']);
-Route::get('/fuel', [ApiController::class, 'fuel']);
+
