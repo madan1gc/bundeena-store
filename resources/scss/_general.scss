@@ -119,8 +119,8 @@ a {
     }
 
     &.secondary-button {
-        background-color: $accent-color;
-        color: $font-color;
+        background-color: $secondary-color;
+        // color: $font-color;
     }
 }
 
@@ -138,6 +138,10 @@ header {
     .logo h1 {
         color: $white-color;
         font-size: 30px;
+
+        img{
+            width: 150px;
+        }
     }
 
     .header-wrapper {

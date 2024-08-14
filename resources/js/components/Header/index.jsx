@@ -1,5 +1,7 @@
 import { NavMenu } from "../../components"
 
+import { logo } from "../images"
+
 
 const Header = () => {
     return (
@@ -8,7 +10,9 @@ const Header = () => {
                 <div className="header-wrapper">
                     <div className="logo">
                         <h1>
-                            <a href="/">Bundeena Store</a>
+                            <a href="/">
+                                <img src={logo} alt="" />
+                            </a>
                         </h1>
                     </div>
                     <NavMenu />

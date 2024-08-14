@@ -4,7 +4,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333333;
-  font-family: "Poppins", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 h1,
@@ -13,7 +13,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Cormorant", serif;
 }
 
 ul,
@@ -40,11 +40,11 @@ a {
 
 button,
 .primary-button {
-  background-color: #336699;
+  background-color: #012F8D;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Mulish", sans-serif;
   padding: 12px 24px;
   border: none;
   color: #ffffff;
@@ -60,30 +60,30 @@ button:hover,
 button.create,
 .primary-button.create {
   margin-bottom: 24px;
-  background-color: #FF6600;
-  border: 1px solid #FF6600;
+  background-color: #EF1E21;
+  border: 1px solid #EF1E21;
   color: #ffffff;
 }
 button.outline:not(.active),
 .primary-button.outline:not(.active) {
   background-color: transparent;
-  border: 1px solid #336699;
+  border: 1px solid #012F8D;
   color: #333333;
 }
 button.outline:not(.active):hover,
 .primary-button.outline:not(.active):hover {
-  background-color: #336699;
+  background-color: #012F8D;
   opacity: 1;
   color: #ffffff;
 }
 button.active,
 .primary-button.active {
-  background-color: #336699;
+  background-color: #012F8D;
 }
 button.accent-button,
 .primary-button.accent-button {
   background-color: transparent;
-  border: 1px solid #FF6600;
+  border: 1px solid #EF1E21;
   color: #333333;
 }
 
@@ -98,7 +98,7 @@ input {
   min-width: 65%;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Poppins", sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
 form {
@@ -137,7 +137,7 @@ form button {
 .login-page .wrapper,
 .create-page .wrapper,
 .edit-page .wrapper {
-  background-color: #F0FFFF;
+  background-color: rgba(230, 242, 255, 0.5);
   border: 1px solid #DDDDDD;
   border-radius: 4px;
   padding: 50px;
@@ -163,7 +163,7 @@ form button {
   margin-bottom: 30px;
 }
 .login-page .wrapper {
-  background-color: #F0FFFF;
+  background-color: rgba(230, 242, 255, 0.5);
   border: 1px solid #DDDDDD;
   border-radius: 4px;
   padding: 50px;
@@ -195,7 +195,7 @@ table th:last-child {
   width: 22%;
 }
 table tr:nth-child(even) {
-  background-color: #F0FFFF;
+  background-color: rgba(230, 242, 255, 0.5);
 }
 
 .edit {
