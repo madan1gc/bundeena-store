@@ -101,6 +101,10 @@ button,
     }
 }
 
+form button{
+    padding: 8px 12px;
+}
+
 input {
     padding: 10px 16px;
     border-radius: 4px;
@@ -207,10 +211,10 @@ table {
         border: 1px solid #dddddd;
         text-align: center;
         padding: 12px 8px;
-    }
 
-    .description {
-        width: 28%;
+        &:last-child{
+            width: 22%;
+        }
     }
 
     tr:nth-child(even) {

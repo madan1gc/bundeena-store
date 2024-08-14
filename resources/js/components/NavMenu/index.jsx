@@ -1,36 +1,35 @@
-import { Link } from 'react-router-dom';
 import { Icon } from "../../components"
 
 const NavMenu = () => {
     return (
         <ul className='nav-menu'>
             <li>
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
             </li>
             <li>
-                <Link to="/offers">Offers</Link>
+                <a href="/offers">Offers</a>
             </li>
             <li className='has-submenu' >
-                <Link className='has-icon' to="#">What's in store <Icon icon="downArrow" /> </Link>
+                <a className='has-icon' href="#">What's in store <Icon icon="downArrow" /> </a>
                 <ul className='submenu'>
-                    <li><Link to="/allstore">All </Link></li>
-                    <li><Link to="#">Sandwiches & Wraps</Link></li>
-                    <li><Link to="#">Coffee</Link></li>
-                    <li><Link to="#">Bakery</Link></li>
-                    <li><Link to="#">Hot Food</Link></li>
+                    <li><a href="/allstore">All </a></li>
+                    <li><a href="#">Sandwiches & Wraps</a></li>
+                    <li><a href="#">Coffee</a></li>
+                    <li><a href="#">Bakery</a></li>
+                    <li><a href="#">Hot Food</a></li>
                 </ul>
             </li>
             <li>
-                <Link to="/services">Services</Link>
+                <a href="/services">Services</a>
             </li>
             <li>
-                <Link to="#">Fuels</Link>
+                <a href="#">Fuels</a>
             </li>
             <li>
-                <Link to="#">News & Events</Link>
+                <a href="#">News & Events</a>
             </li>
             <li>
-                <Link to="#">Partners</Link>
+                <a href="#">Partners</a>
             </li>
         </ul>
     )

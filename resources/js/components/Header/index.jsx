@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { NavMenu } from "../../components"
 
 
@@ -9,12 +8,12 @@ const Header = () => {
                 <div className="header-wrapper">
                     <div className="logo">
                         <h1>
-                            <Link to="/">Bundeena Store</Link>
+                            <a href="/">Bundeena Store</a>
                         </h1>
                     </div>
                     <NavMenu />
                     <div className="button-wrapper">
-                        <Link className='button secondary-button' to="#">Contact</Link>
+                        <a className='button secondary-button' href="#">Contact</a>
                     </div>
                 </div>
 

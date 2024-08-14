@@ -3,9 +3,6 @@ import 'react-tabs/style/react-tabs.css';
 import { Card, Carousel, CTA, SectionHeader } from '../../components';
 import { categoryList, serviceList, sliderContent, useProductData } from '../../components/data';
 import { cta } from '../../components/images';
-
-// import axios from 'axios';
-
 const Home = () => {
 
     const data = useProductData();
@@ -61,7 +58,7 @@ const Home = () => {
                     </Tabs>
 
                     <div className="button-wrapper">
-                        <a className='button primary-button' href="#">View all Offers</a>
+                        <a className="button primary-button" href="/offers">View all Offers</a>
                     </div>
                 </div>
 
@@ -107,7 +104,7 @@ const Home = () => {
                         slidesToShow={3}
                     />
                     <div className="button-wrapper">
-                        <a className='button primary-button' href="#">View all Services</a>
+                        <a className='button primary-button' href="/services">View all Services</a>
                     </div>
                 </div>
             </section>

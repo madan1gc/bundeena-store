@@ -18,7 +18,7 @@
         <tr>
             <td><img src="{{ asset($product->getImage()) }}" style="height: 100px;width: 100px;"></td>
             <td>{{ $product->price }}</td>
-            <td class="description">{{ $product->description }}</td>
+            <td>{{ $product->description }}</td>
             <td>{{ $product->from_date }}</td>
             <td>{{ $product->to_date }}</td>
             <td>{{ $product->category }}</td>

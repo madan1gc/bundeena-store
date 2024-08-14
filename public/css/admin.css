@@ -87,6 +87,10 @@ button.accent-button,
   color: #333333;
 }
 
+form button {
+  padding: 8px 12px;
+}
+
 input {
   padding: 10px 16px;
   border-radius: 4px;
@@ -186,8 +190,9 @@ table th {
   text-align: center;
   padding: 12px 8px;
 }
-table .description {
-  width: 28%;
+table td:last-child,
+table th:last-child {
+  width: 22%;
 }
 table tr:nth-child(even) {
   background-color: #F0FFFF;
