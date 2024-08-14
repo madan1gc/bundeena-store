@@ -200,6 +200,7 @@ table tr:nth-child(even) {
 
 .data-list {
   margin: 0 0 50px;
+  width: 100%;
 }
 
 .table-wrapper {

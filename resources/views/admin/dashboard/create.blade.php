@@ -45,7 +45,7 @@
                     <label>Category</label>
                     <select id="category" name="category">
                         <option value="specials">Specials</option>
-                        <option value="2for">2 for</option>
+                        <option value="twofor">2 for</option>
                     </select>
                 </div>
                 <button>Submit</button>

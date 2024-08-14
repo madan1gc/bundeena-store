@@ -45,7 +45,7 @@
                     <label>Category</label>
                     <select id="category" name="category">
                         <option value="specials" @if ($product->category == 'specials') selected @endif>Specials</option>
-                        <option value="2for" @if ($product->category == '2for') selected @endif>2 for</option>
+                        <option value="twofor" @if ($product->category == 'twofor') selected @endif>2 for</option>
                     </select>
                 </div>
                 <button>Submit</button>

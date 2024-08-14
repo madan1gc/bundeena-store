@@ -21,8 +21,8 @@
                 @csrf
                 <input type="text" name="id" value="{{$data->id}}" hidden>
                 <div class="input-wrapper">
-                    <label>Price</label>
-                    <input type="text" name="price" value="{{$data->price}}">
+                    <label>Title</label>
+                    <input type="text" name="title" value="{{$data->title}}">
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>
@@ -34,7 +34,12 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Category</label>
-                    <input type="text" name="category" value="{{$data->category}}">
+                    <select id="category" name="category">
+                        <option value="Sandwiches" @if ($data->category == 'Sandwiches') selected @endif>Sandwiches & Wraps</option>
+                        <option value="Coffee" @if ($data->category == 'Coffee') selected @endif>Coffee</option>
+                        <option value="Bakery" @if ($data->category == 'Bakery') selected @endif>Bakery</option>
+                        <option value="HotFood" @if ($data->category == 'HotFood') selected @endif>Hot Food</option>
+                    </select>
                 </div>
                 <button>Submit</button>
             </form>

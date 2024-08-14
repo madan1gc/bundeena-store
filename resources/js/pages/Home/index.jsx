@@ -1,15 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { Card, Carousel, SectionHeader, CTA } from '../../components';
-import { cta } from '../../components/images'
-import { sliderContent, categoryList, serviceList, useProductData } from '../../components/data'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { Card, Carousel, CTA, SectionHeader } from '../../components';
+import { categoryList, serviceList, sliderContent, useProductData } from '../../components/data';
+import { cta } from '../../components/images';
 
 // import axios from 'axios';
 
 const Home = () => {
 
     const data = useProductData();
+
+    const categoryOne = data && data.offers && data.offers.specials
+        ? data.offers.specials
+            .filter(item => item.publish === 1)
+            .slice(-3)
+            .reverse()
+        : [];
+
+    const categoryTwo = data && data.offers && data.offers.specials
+        ? data.offers.twofor
+            .filter(item => item.publish === 1)
+            .slice(-3)
+            .reverse()
+        : [];
+
 
     return (
         < >
@@ -30,18 +44,18 @@ const Home = () => {
                     />
                     <Tabs>
                         <TabList>
-                            <Tab>Offer 1</Tab>
-                            <Tab>Offer 2</Tab>
+                            <Tab>Specials</Tab>
+                            <Tab>2 For</Tab>
                         </TabList>
 
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={data.fuel || []} />
+                                <Card cardItem={categoryOne} />
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={data.specials || []} />
+                                <Card cardItem={categoryTwo} />
                             </div>
                         </TabPanel>
                     </Tabs>

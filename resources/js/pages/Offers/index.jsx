@@ -1,10 +1,24 @@
 import { SectionHeader, Card, CTA } from "../../components"
-import { offerCard, serviceList } from '../../components/data'
+import { offerCard, serviceList, useProductData } from '../../components/data'
 import { cta } from '../../components/images'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const Offers = () => {
+
+    const data = useProductData();
+
+    const categoryOne = data && data.offers && data.offers.specials
+        ? data.offers.specials
+            .filter(item => item.publish === 1)
+            .reverse()
+        : [];
+
+    const categoryTwo = data && data.offers && data.offers.specials
+        ? data.offers.twofor
+            .filter(item => item.publish === 1)
+            .reverse()
+        : [];
     return (
         <div className="inner-page" >
             <section className="banner">
@@ -33,12 +47,12 @@ const Offers = () => {
 
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={offerCard} />
+                                <Card cardItem={categoryOne} />
                             </div>
                         </TabPanel>
                         <TabPanel>
                             <div className="card-wrapper">
-                                <Card cardItem={serviceList} />
+                                <Card cardItem={categoryTwo} />
                             </div>
                         </TabPanel>
                     </Tabs>

@@ -14,6 +14,11 @@ class ProductController extends Controller
     public function index()
     {
         $products = ProductModel::orderBy('created_at', 'desc')->get();
+        foreach($products as $product){
+            if($product->category === 'twofor'){
+                $product->category = '2 For';
+            }
+        }
         return view('admin.dashboard.index',compact('products'));
     }
     public function getData()
