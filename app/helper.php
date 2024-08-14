@@ -19,7 +19,7 @@
     $data = $services->map(function($services) {
         return $services->map(function($service) {
             return [
-                'price' => $service->price,
+                'title' => $service->title,
                 'description' => $service->description,
                 'image' => $service->getImage(),
                 'publish' => $service->publish,
@@ -33,7 +33,7 @@
     $data = $stores->map(function($stores) {
         return $stores->map(function($product) {
             return [
-                'price' => $product->price,
+                'title' => $product->title,
                 'description' => $product->description,
                 'image' => $product->getImage(),
                 'publish' => $product->publish,
@@ -48,7 +48,7 @@
     $data = $fuels->map(function($fuels) {
         return $fuels->map(function($fuel) {
             return [
-                'price' => $fuel->price,
+                'title' => $fuel->title,
                 'description' => $fuel->description,
                 'image' => $fuel->getImage(),
                 'publish' => $fuel->publish,

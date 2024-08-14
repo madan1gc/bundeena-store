@@ -20,8 +20,8 @@
             <form action="{{ route('fuel.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="input-wrapper">
-                    <label>Price</label>
-                    <input type="text" name="price">
+                    <label>Title</label>
+                    <input type="text" name="title">
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>

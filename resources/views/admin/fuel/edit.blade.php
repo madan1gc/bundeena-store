@@ -21,8 +21,8 @@
                 @csrf
                 <input type="text" name="id" value="{{$data->id}}" hidden>
                 <div class="input-wrapper">
-                    <label>Price</label>
-                    <input type="text" name="price" value="{{$data->price}}">
+                    <label>Title</label>
+                    <input type="text" name="title" value="{{$data->title}}">
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>

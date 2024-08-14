@@ -9,7 +9,7 @@ class Service extends Model
 {
     use HasFactory;
     protected $table = 'services';
-    protected $fillable = ['id','price','description','image','category'];
+    protected $fillable = ['id','price','description','image','category','title'];
 
     public function getImage(){
         if($this->image){

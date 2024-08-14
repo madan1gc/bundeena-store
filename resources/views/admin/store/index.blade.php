@@ -14,7 +14,6 @@
                 </tr>
                 @foreach ($products as $product)
                 <tr>
-                    @dd($product)
                     <td><img src="{{ asset($product->getImage()) }}" style="height: 100px;width: 100px;"></td>
                     <td>{{ $product->title }}</td>
                     <td class="description">{{ $product->description }}</td>

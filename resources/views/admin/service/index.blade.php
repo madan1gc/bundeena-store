@@ -7,7 +7,7 @@
     <table>
         <tr>
             <th>Image</th>
-            <th>Price</th>
+            <th>Title</th>
             <th>Desciption</th>
             <th>Category</th>
             <th>Action</th>
@@ -15,7 +15,7 @@
         @foreach ($products as $product)
         <tr>
             <td><img src="{{ asset($product->getImage()) }}" style="height: 100px;width: 100px;"></td>
-            <td>{{ $product->price }}</td>
+            <td>{{ $product->title }}</td>
             <td class="description">{{ $product->description }}</td>
             <td>{{ $product->category }}</td>
             <td>

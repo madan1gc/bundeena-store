@@ -22,7 +22,7 @@ class FuelController extends Controller
     {
        
         $data = [
-            'price' => $request->price,
+            'title' => $request->title,
             'description' => $request->description,
             'category' => $request->category,
             'publish' => false,
@@ -67,7 +67,7 @@ class FuelController extends Controller
     public function update(Request $request){
         $fuel = Fuel::find($request->id);
         $data = [
-            'price' => $request->price,
+            'title' => $request->title,
             'description' => $request->description,
             'category' => $request->category,
         ];
