@@ -21,7 +21,7 @@ const Carousel = ({ sliderContent, style, slidesToShow }) => {
             <div className="text">
               <h2>{content.title}</h2>
               <p>{content.description}</p>
-              {content.buttonText && <a className="button primary-button" href={content.link}>{content.buttonText}</a>}
+              {content.buttonText && <a className="button secondary-button" href={content.link}>{content.buttonText}</a>}
             </div>
             <div className="image">
               <img src={content.image} alt={content.title} />

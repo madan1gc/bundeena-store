@@ -94,15 +94,20 @@ button,
         background-color: $primary-color;
     }
 
-    &.accent-button{
+    &.accent-button {
         background-color: transparent;
         border: 1px solid $accent-color;
         color: $font-color;
     }
 }
 
-form button{
-    padding: 8px 12px;
+.edit form {
+    flex-direction: row;
+
+    button {
+        padding: 8px 12px;
+        margin: 0;
+    }
 }
 
 input {
@@ -159,7 +164,8 @@ form {
         width: 45%;
         box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
     }
-    select{
+
+    select {
         width: 65%;
         padding: 10px 12px;
         font-size: 16px;
@@ -171,7 +177,7 @@ form {
 .login-page {
     display: flex;
     justify-content: center;
-    margin:50px 0;
+    margin: 50px 0;
 
     .login-title {
         text-align: center;
@@ -212,7 +218,7 @@ table {
         text-align: center;
         padding: 12px 8px;
 
-        &:last-child{
+        &:last-child {
             width: 22%;
         }
     }

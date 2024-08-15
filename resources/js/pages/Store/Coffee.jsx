@@ -2,15 +2,15 @@ import { SectionHeader, Card, CTA } from "../../components"
 import { useProductData } from '../../components/data'
 import { cta } from '../../components/images'
 
-const AllStore = () => {
+const Coffee = () => {
 
     const data = useProductData();
 
-    const storesData = data && data.stores ? data.stores : {};
-
-    const allItems = Object.values(storesData).flat().reverse();
-
-    console.log(allItems);
+    const coffee = data && data.stores && data.stores.Coffee
+        ? data.stores.Coffee
+            .filter(item => item.publish === 1)
+            .reverse()
+        : [];
 
     return (
         <div className="inner-page" >
@@ -18,18 +18,21 @@ const AllStore = () => {
                 <div className="container">
                     <div className="text-wrapper">
                         <h1>
-                            Convenience Products available at Coles Express and Reddy Express
+                            Coffee to Go
                         </h1>
                         <p>
-                            We have a wide range of convenience products available in-store. You can find a variety of drinks, including freshly ground hot and iced coffee, Frozen Coke and bottled cold drinks. Our food options include sandwiches, hot pies, banana bread, ice cream and other sweet and savoury snacks. Coles Express and Reddy Express convenience stores are your one-stop shop to stock up on groceries and household essentials, swap SodaStream cylinders or pick up firewood and ice bags. Our product range at also includes an extensive range of Shell branded engine oils and lubricants to keep your vehicles well maintained.
+                            Our quality coffee beans are batch roasted in Melbourne and freshly ground in-store. Customise your coffee strength and choose from hot or iced. For something different, try our creamy hot chocolate or chai latte. Why not pair your drink of choice with one of our delicious treats, like a muffin or banana bread today!
                         </p>
                     </div>
                 </div >
             </section>
             <section className='offer'>
                 <div className="container">
+                    <SectionHeader
+                        heading="Sandwiches Full Range"
+                    />
                     <div className="card-wrapper">
-                        <Card cardItem={allItems} />
+                        <Card cardItem={coffee} />
                     </div>
                 </div>
             </section>
@@ -48,4 +51,4 @@ const AllStore = () => {
     )
 }
 
-export default AllStore
+export default Coffee

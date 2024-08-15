@@ -42,22 +42,22 @@ export const offerCard = [
 
 export const categoryList = [
     {
-        link: "#",
+        link: "/fules",
         image: bannerImage,
         name: "Fuel",
     },
     {
-        link: "#",
+        link: "/coffee",
         image: bannerImage,
         name: "Coffee",
     },
     {
-        link: "#",
+        link: "/hotfood",
         image: bannerImage,
         name: "Food",
     },
     {
-        link: "#",
+        link: "/services",
         image: bannerImage,
         name: "Service",
     },

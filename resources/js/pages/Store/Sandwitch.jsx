@@ -2,15 +2,15 @@ import { SectionHeader, Card, CTA } from "../../components"
 import { useProductData } from '../../components/data'
 import { cta } from '../../components/images'
 
-const AllStore = () => {
+const Sandwitch = () => {
 
     const data = useProductData();
 
-    const storesData = data && data.stores ? data.stores : {};
-
-    const allItems = Object.values(storesData).flat().reverse();
-
-    console.log(allItems);
+    const sandwiches = data && data.stores && data.stores.Sandwiches
+        ? data.stores.Sandwiches
+            .filter(item => item.publish === 1)
+            .reverse()
+        : [];
 
     return (
         <div className="inner-page" >
@@ -18,18 +18,21 @@ const AllStore = () => {
                 <div className="container">
                     <div className="text-wrapper">
                         <h1>
-                            Convenience Products available at Coles Express and Reddy Express
+                            Sandwiches & Wraps at Coles Express
                         </h1>
                         <p>
-                            We have a wide range of convenience products available in-store. You can find a variety of drinks, including freshly ground hot and iced coffee, Frozen Coke and bottled cold drinks. Our food options include sandwiches, hot pies, banana bread, ice cream and other sweet and savoury snacks. Coles Express and Reddy Express convenience stores are your one-stop shop to stock up on groceries and household essentials, swap SodaStream cylinders or pick up firewood and ice bags. Our product range at also includes an extensive range of Shell branded engine oils and lubricants to keep your vehicles well maintained.
+                            Try our delicious range of sandwiches and wraps! All of our wraps and sandwiches are hand-made with quality ingredients, and lunch ready for you at Coles Express and Reddy Express. Try our range of chicken sandwiches or wraps including our famous chicken caesar wrap prepared with RSPCA approved chicken, a roast beef sandwich or explore our vegetarian sandwich & wrap options. Visit your nearest Coles Express or Reddy Express store or conveniently order your favourite lunch deals through the DoorDash App.
                         </p>
                     </div>
                 </div >
             </section>
             <section className='offer'>
                 <div className="container">
+                    <SectionHeader
+                        heading="Sandwiches Full Range"
+                    />
                     <div className="card-wrapper">
-                        <Card cardItem={allItems} />
+                        <Card cardItem={sandwiches} />
                     </div>
                 </div>
             </section>
@@ -48,4 +51,4 @@ const AllStore = () => {
     )
 }
 
-export default AllStore
+export default Sandwitch

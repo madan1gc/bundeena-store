@@ -2,15 +2,17 @@ import { SectionHeader, Card, CTA } from "../../components"
 import { useProductData } from '../../components/data'
 import { cta } from '../../components/images'
 
-const AllStore = () => {
+const Fules = () => {
 
     const data = useProductData();
 
-    const storesData = data && data.stores ? data.stores : {};
+    const fules = data && data.fuels && data.fuels.fuel
+        ? data.fuels.fuel
+            .filter(item => item.publish === 1)
+            .reverse()
+        : [];
 
-    const allItems = Object.values(storesData).flat().reverse();
-
-    console.log(allItems);
+        console.log(fules);
 
     return (
         <div className="inner-page" >
@@ -18,18 +20,22 @@ const AllStore = () => {
                 <div className="container">
                     <div className="text-wrapper">
                         <h1>
-                            Convenience Products available at Coles Express and Reddy Express
+                            Coles Express Fuel Discount Vouchers
                         </h1>
                         <p>
-                            We have a wide range of convenience products available in-store. You can find a variety of drinks, including freshly ground hot and iced coffee, Frozen Coke and bottled cold drinks. Our food options include sandwiches, hot pies, banana bread, ice cream and other sweet and savoury snacks. Coles Express and Reddy Express convenience stores are your one-stop shop to stock up on groceries and household essentials, swap SodaStream cylinders or pick up firewood and ice bags. Our product range at also includes an extensive range of Shell branded engine oils and lubricants to keep your vehicles well maintained.
+                            We work closely with our partners at Shell to provide you with quality fuels across Australia.
                         </p>
                     </div>
                 </div >
             </section>
             <section className='offer'>
                 <div className="container">
+                    <SectionHeader
+                        heading="Current Fuel Promotions"
+                        description="Get more from your fuel purchase"
+                    />
                     <div className="card-wrapper">
-                        <Card cardItem={allItems} />
+                        <Card cardItem={fules} />
                     </div>
                 </div>
             </section>
@@ -48,4 +54,4 @@ const AllStore = () => {
     )
 }
 
-export default AllStore
+export default Fules

@@ -87,8 +87,12 @@ button.accent-button,
   color: #333333;
 }
 
-form button {
+.edit form {
+  flex-direction: row;
+}
+.edit form button {
   padding: 8px 12px;
+  margin: 0;
 }
 
 input {
