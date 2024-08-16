@@ -12,19 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('store', function (Blueprint $table) {
-             $table->text('description')->change();
+             $table->text('description')->nullable()->change();
         });
 
         Schema::table('services', function (Blueprint $table) {
-             $table->text('description')->change();
+             $table->text('description')->nullable()->change();
         });
 
         Schema::table('fuels', function (Blueprint $table) {
-             $table->text('description')->change();
+             $table->text('description')->nullable()->change();
         });
 
         Schema::table('products', function (Blueprint $table) {
-            $table->text('description')->change();
+            $table->text('description')->nullable()->change();
        });
     }
 
