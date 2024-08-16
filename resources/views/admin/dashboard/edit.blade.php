@@ -29,7 +29,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>
-                    <input type="text" name="description" value="{{ $product->description }}">
+                    <textarea name="description" id="" cols="30" rows="10">{{$product->description}}</textarea>
                 </div>
                 <div class="input-wrapper">
                     <label>From Date</label>

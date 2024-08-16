@@ -15,7 +15,7 @@
             <div class="logo">
                 <h1>
                     Reddy Store
-                    <img src="{{ asset('resources/images/logo.png') }}" alt="">
+                    <img src="{{ asset('images/admin/logo.png') }}" alt="">
                 </h1>
             </div>
             <a class="primary-button" href="{{route('logout')}}">Logout</a>
