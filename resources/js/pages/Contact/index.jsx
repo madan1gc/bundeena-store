@@ -1,6 +1,3 @@
-import { CardTwo, Card, CTA } from "../../components"
-import { carwash, serviceListTwo } from '../../components/data'
-import { cta } from '../../components/images'
 
 const Contact = () => {
     return (

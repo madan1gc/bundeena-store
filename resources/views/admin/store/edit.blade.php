@@ -26,7 +26,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>
-                    <textarea name="description" id="" cols="30" rows="10">{{$data->description}}</textarea>
+                    <textarea name="description" id="" cols="30" rows="5">{{$data->description}}</textarea>
                 </div>
                 <div class="input-wrapper">
                     <label>Image</label>

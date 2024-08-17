@@ -1,8 +1,16 @@
 import { CardTwo, Card, CTA } from "../../components"
-import { carwash, serviceListTwo } from '../../components/data'
+import { carwash, serviceListTwo, useProductData } from '../../components/data'
 import { cta } from '../../components/images'
 
 const Services = () => {
+
+    const data = useProductData();
+
+    const services = data && data.services && data.services.sevice
+        ? data.services.sevice
+            .filter(item => item.publish === 1)
+            .reverse()
+        : [];
     return (
         <div className="inner-page" >
             <section className="banner">
@@ -37,7 +45,7 @@ const Services = () => {
             <section className="services two">
                 <div className="container">
                     <div className="card-wrapper">
-                        <Card cardItem={serviceListTwo} />
+                        <Card cardItem={services} />
                     </div>
                 </div>
             </section>

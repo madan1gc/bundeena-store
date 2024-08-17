@@ -27,7 +27,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Description</label>
-                    <textarea name="description" id="" cols="30" rows="10"></textarea>
+                    <textarea name="description" id="" cols="30" rows="5"></textarea>
                 </div>
                 <div class="input-wrapper">
                     <label>Image</label>
