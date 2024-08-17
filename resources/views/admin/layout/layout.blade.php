@@ -13,10 +13,9 @@
     <div class="dashboard container">
         <header class="admin-header">
             <div class="logo">
-                <h1>
-                    Reddy Store
-                    <img src="{{ asset('images/admin/logo.png') }}" alt="">
-                </h1>
+                <a href="/">
+                    <img src="{{ asset('images/admin/logo-blue.png') }}" alt="">
+                </a>
             </div>
             <a class="primary-button" href="{{route('logout')}}">Logout</a>
         </header>

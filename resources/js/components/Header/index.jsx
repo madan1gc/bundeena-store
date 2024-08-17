@@ -17,7 +17,7 @@ const Header = () => {
                     </div>
                     <NavMenu />
                     <div className="button-wrapper">
-                        <a className='button secondary-button' href="#">Contact</a>
+                        <a className='button secondary-button' href="/contact">Contact</a>
                     </div>
                 </div>
 
