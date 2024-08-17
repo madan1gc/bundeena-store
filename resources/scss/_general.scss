@@ -122,6 +122,11 @@ a {
         background-color: $secondary-color;
         // color: $font-color;
     }
+
+    &.white-button{
+        background-color: $white-color;
+        color: $font-color;
+    }
 }
 
 // header 
