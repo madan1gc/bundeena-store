@@ -1,6 +1,22 @@
-import { Icon } from "../../components"
+import { Icon } from "../../components";
+import { useProductData } from '../../components/data';
+import { useState, useEffect } from "react";
 
 const NavMenu = () => {
+    const [storeCategory, setStoreCategory] = useState([]);
+    const data = useProductData();
+
+    useEffect(() => {
+        if (data && data.stores) {
+            const storeData = data.stores;
+            const names = Object.keys(storeData);
+            setStoreCategory(names);
+        }
+    }, [data]);
+    const generateSlug = (name) => {
+        return name.toLowerCase().replace(/\s+/g, '-');
+    };
+
     return (
         <ul className='nav-menu'>
             <li>
@@ -9,14 +25,17 @@ const NavMenu = () => {
             <li>
                 <a href="/offers">Offers</a>
             </li>
-            <li className='has-submenu' >
-                <a className='has-icon' href="#">What's in store <Icon icon="downArrow" /> </a>
+            <li className='has-submenu'>
+                <a className='has-icon' href="#">What's in store <Icon icon="downArrow" /></a>
                 <ul className='submenu'>
-                    <li><a href="/allstore">All </a></li>
-                    <li><a href="/sandwitch">Sandwiches & Wraps</a></li>
-                    <li><a href="/coffee">Coffee</a></li>
-                    <li><a href="/bakery">Bakery</a></li>
-                    <li><a href="/hotfood">Hot Food</a></li>
+                    <li><a href="/allstore">All</a></li>
+                    {
+                        storeCategory.map((category, index) => (
+                            <li className="store-category" key={index}>
+                                <a href={`/store/${generateSlug(category)}`}>{category}</a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </li>
             <li>
@@ -29,7 +48,7 @@ const NavMenu = () => {
                 <a href="#">News & Events</a>
             </li>
         </ul>
-    )
-}
+    );
+};
 
-export default NavMenu
+export default NavMenu;

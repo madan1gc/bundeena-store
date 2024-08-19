@@ -205,6 +205,10 @@ header {
                     transform: rotate(-180deg);
                 }
             }
+
+            .store-category{
+                text-transform: capitalize;
+            }
         }
     }
 }
