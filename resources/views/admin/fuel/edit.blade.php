@@ -24,7 +24,7 @@
                 <input type="text" name="id" value="{{$data->id}}" hidden>
                 <div class="input-wrapper">
                     <label>Title</label>
-                    <input type="text" name="title" value="{{$data->title}}">
+                    <input type="text" name="title" value="{{$data->title}}" disabled>
                 </div>
                 <div class="input-wrapper">
                     <label>Price</label>

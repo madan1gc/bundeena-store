@@ -67,7 +67,6 @@ class FuelController extends Controller
     public function update(Request $request){
         $fuel = Fuel::find($request->id);
         $data = [
-            'title' => $request->title,
             'price' => $request->price,
         ];
         $fuel->update($data);
