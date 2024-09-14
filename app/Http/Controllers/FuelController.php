@@ -68,23 +68,10 @@ class FuelController extends Controller
         $fuel = Fuel::find($request->id);
         $data = [
             'title' => $request->title,
-            'description' => $request->description,
-            'category' => $request->category,
+            'price' => $request->price,
         ];
-        $imageName=null;
-        if ($request->hasFile('image')) {
-            $imagePath = public_path('images/fuel/' . $fuel->image);
-            if (File::exists($imagePath)) {
-                File::delete($imagePath);
-            }
-            $image = $request->file('image');
-            $imageName = 'img'. '_' . time(). rand(1,1000).  '.' .$image->getClientOriginalExtension();
-            $image->move(public_path('images/fuel'), $imageName);
-            $data['image'] = $imageName;
-        }
         $fuel->update($data);
         return redirect()->route('fuel');
-        
     }
 
 }

@@ -27,18 +27,8 @@
                     <input type="text" name="title" value="{{$data->title}}">
                 </div>
                 <div class="input-wrapper">
-                    <label>Description</label>
-                    <textarea name="description" id="" cols="30" rows="5">{{$data->description}}</textarea>
-                </div>
-                <div class="input-wrapper">
-                    <label>Image</label>
-                    <input type="file" name="image">
-                </div>
-                <div class="input-wrapper">
-                    <label>Category</label>
-                    <select id="category" name="category">
-                        <option value="fuel" @if ($data->category == 'fuel') selected @endif>Fuel</option>
-                    </select>
+                    <label>Price</label>
+                    <input type="number" name="price" value="{{$data->price}}" step="0.00000001">
                 </div>
                 <button>Submit</button>
             </form>

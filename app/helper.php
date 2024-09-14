@@ -49,9 +49,7 @@
         return $fuels->map(function($fuel) {
             return [
                 'title' => $fuel->title,
-                'description' => $fuel->description,
-                'image' => $fuel->getImage(),
-                'publish' => $fuel->publish,
+                'price' => $fuel->price,
             ];
         });
     });
