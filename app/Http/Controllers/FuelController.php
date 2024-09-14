@@ -13,63 +13,16 @@ class FuelController extends Controller
         $products = Fuel::orderBy('created_at', 'desc')->get();
         return view('admin.fuel.index',compact('products'));
     }
-    public function create()
-    {
-        return view('admin.fuel.create');
-    }
-
-    public function store(Request $request)
-    {
-       
-        $data = [
-            'title' => $request->title,
-            'description' => $request->description,
-            'category' => $request->category,
-            'publish' => false,
-        ];
-        $imageName=null;
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = 'img'. '_' . time(). rand(1,1000).  '.' .$image->getClientOriginalExtension();
-            $image->move(public_path('images/fuel'), $imageName);
-        }
-        $data['image'] = $imageName;
-        Fuel::create($data);
-        return redirect()->route('fuel');
-    }
-    public function delete($id){
-        $data = Fuel::find($id);
-        $imagePath = public_path('images/fuel/' . $data->image);
-        if (File::exists($imagePath)) {
-            File::delete($imagePath);
-        }
-        $data->delete();
-        return redirect()->route('fuel');
-    }
-
-    public function publish($id){
-        $data = Fuel::find($id);
-        if($data->publish == 1){
-            $data->publish = 0;
-            $data->save();
-            return redirect()->route('fuel');
-        }
-        $data->publish = 1;
-        $data->save();
-        return redirect()->route('fuel');
-    }
-
-    public function edit($id){
-        $data = Fuel::find($id);
-        return view('admin.fuel.edit',compact('data'));
-    }
-
     public function update(Request $request){
-        $fuel = Fuel::find($request->id);
-        $data = [
-            'price' => $request->price,
-        ];
-        $fuel->update($data);
+        $ids = $request->input('id');
+        $prices = $request->input('price'); 
+        foreach ($ids as $index => $id) {
+            $price = $prices[$index];
+            $fuel = Fuel::find($id);
+            $fuel->price = $price;
+            $fuel->save();
+        }
+        
         return redirect()->route('fuel');
     }
 
