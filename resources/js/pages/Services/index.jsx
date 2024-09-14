@@ -1,5 +1,5 @@
 import { CardTwo, Card, CTA } from "../../components"
-import { carwash, serviceListTwo, useProductData } from '../../components/data'
+import { carwash, useProductData } from '../../components/data'
 import { cta } from '../../components/images'
 
 const Services = () => {

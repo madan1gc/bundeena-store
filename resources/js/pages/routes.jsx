@@ -2,10 +2,7 @@ import Home from './Home'
 import Offers from './Offers'
 import AllStore from './Store/AllStore'
 import Services from './Services'
-import Sandwitch from './Store/Sandwitch'
-import Coffee from './Store/Coffee'
-import Bakery from './Store/Bakery'
-import Hotfood from './Store/Hotfood'
+import StoreCategoryPage  from './Store/StoreCategoryPage'
 import Fules from './Fules'
 import Contact from './Contact'
 
@@ -14,10 +11,7 @@ const routes = [
     { path: '/offers', element: <Offers /> },
     { path: '/allstore', element: <AllStore /> },
     { path: '/services', element: <Services /> },
-    { path: '/sandwitch', element: <Sandwitch /> },
-    { path: '/coffee', element: <Coffee /> },
-    { path: '/bakery', element: <Bakery /> },
-    { path: '/hotfood', element: <Hotfood /> },
+    { path: '/store/:category', element: <StoreCategoryPage /> },
     { path: '/fules', element: <Fules /> },
     { path: '/contact', element: <Contact /> },
 ];

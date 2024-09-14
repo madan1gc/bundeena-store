@@ -35,12 +35,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Category</label>
-                    <select id="category" name="category">
-                        <option value="Sandwiches">Sandwiches & Wraps</option>
-                        <option value="Coffee">Coffee</option>
-                        <option value="Bakery">Bakery</option>
-                        <option value="HotFood">Hot Food</option>
-                    </select>
+                    <input type="text" name="category">
                 </div>
                 <button>Submit</button>
             </form>

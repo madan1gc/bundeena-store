@@ -34,12 +34,7 @@
                 </div>
                 <div class="input-wrapper">
                     <label>Category</label>
-                    <select id="category" name="category">
-                        <option value="Sandwiches" @if ($data->category == 'Sandwiches') selected @endif>Sandwiches & Wraps</option>
-                        <option value="Coffee" @if ($data->category == 'Coffee') selected @endif>Coffee</option>
-                        <option value="Bakery" @if ($data->category == 'Bakery') selected @endif>Bakery</option>
-                        <option value="HotFood" @if ($data->category == 'HotFood') selected @endif>Hot Food</option>
-                    </select>
+                    <input type="text" name="category" value="{{$data->category}}">
                 </div>
                 <button>Submit</button>
             </form>
