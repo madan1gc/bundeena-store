@@ -41,8 +41,8 @@ const Offers = () => {
                     />
                     <Tabs>
                         <TabList>
-                            <Tab>Offer 1</Tab>
-                            <Tab>Offer 2</Tab>
+                            <Tab>Specials</Tab>
+                            <Tab>2 For</Tab>
                         </TabList>
 
                         <TabPanel>

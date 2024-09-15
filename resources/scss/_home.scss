@@ -27,20 +27,41 @@
         color: $white-color;
     }
 
-    .fuel-wrapper{
+    .fuel-wrapper {
         position: fixed;
-        background-color: $white-color;
-        bottom:56px;
+        background-color: $primary-color;
+        bottom: 56px;
         right: 20px;
         z-index: 99;
-        color: $secondary-color;
-        padding: 16px 24px;
+        color: $white-color;
         border-radius: 8px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-        .fuel-itemprice{
+        box-shadow: 0 8px 34px 10px rgba(0, 0, 0, 0.2);
+
+        .fuel-itemprice {
             display: flex;
             justify-content: space-between;
             gap: 16px;
+
+            &:not(:last-child) {
+                border-bottom: 2px solid #717171;
+            }
+
+            span {
+                padding: 8px 16px;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .title {
+                font-family: $heading-font;
+                font-size: 24px;
+                font-weight: 500;
+            }
+
+            .price {
+                justify-content: flex-end;
+                font-family: $style-font;
+            }
         }
     }
 }

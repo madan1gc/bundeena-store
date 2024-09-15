@@ -23,15 +23,11 @@ class FuelSeeder extends Seeder
                 'price' => '10',
             ],
             [
-                'title' => 'Premium Unleaded 95',
+                'title' => 'Premium Unleaded 98',
                 'price' => '10',
             ],
             [
-                'title' => 'Diesel',
-                'price' => '10',
-            ],
-            [
-                'title' => 'LPG',
+                'title' => 'Premium Diesel',
                 'price' => '10',
             ],
         ];

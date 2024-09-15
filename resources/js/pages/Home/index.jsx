@@ -36,8 +36,8 @@ const Home = () => {
                         {
                             price && price.map((item, index) => (
                                 <div key={index} className="fuel-itemprice">
-                                    <span>{item.title}</span>
-                                    <span>{item.price}</span>
+                                    <span className='title'>{item.title}</span>
+                                    <span className='price' >{item.price}</span>
                                 </div>
                             ))
                         }
