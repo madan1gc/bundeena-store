@@ -20,7 +20,7 @@ class ApiController extends Controller
         $stores = StoreModel::all()->groupBy('category');
         $formattedStores =  formattedStore($stores);
 
-        $fuels = Fuel::all()->groupBy('category');
+        $fuels = Fuel::all();
         $formattedFuels =  formattedFuel($fuels);
         
         $responseData = [

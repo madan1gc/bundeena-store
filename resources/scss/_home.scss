@@ -26,6 +26,23 @@
     h2 {
         color: $white-color;
     }
+
+    .fuel-wrapper{
+        position: fixed;
+        background-color: $white-color;
+        bottom:56px;
+        right: 20px;
+        z-index: 99;
+        color: $secondary-color;
+        padding: 16px 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+        .fuel-itemprice{
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+    }
 }
 
 .section-header {
@@ -89,6 +106,7 @@ section {
             aspect-ratio: 1/1;
             overflow: hidden;
             transition: 0.4s ease-in-out;
+            text-align: center;
 
             img {
                 width: 100%;

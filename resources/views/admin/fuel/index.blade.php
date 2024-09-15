@@ -16,7 +16,7 @@
                 <input type="text" name="id[{{ $index }}]" value="{{$product->id}}" hidden>
                 <td>{{ $product->title }}</td>
                 <td class="description">
-                    <input type="number" name="price[{{ $index }}]" value="{{$product->price}}" step="0.00000001">
+                    <input type="text" name="price[{{ $index }}]" value="{{$product->price}}">
                 </td>
             </tr>
             @endforeach

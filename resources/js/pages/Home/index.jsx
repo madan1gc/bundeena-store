@@ -21,6 +21,7 @@ const Home = () => {
             .reverse()
         : [];
 
+    const price = data && data.fuels
 
     return (
         < >
@@ -31,6 +32,16 @@ const Home = () => {
                         style="vertical"
                         slidesToShow={1}
                     />
+                    <div className="fuel-wrapper">
+                        {
+                            price && price.map((item, index) => (
+                                <div key={index} className="fuel-itemprice">
+                                    <span>{item.title}</span>
+                                    <span>{item.price}</span>
+                                </div>
+                            ))
+                        }
+                    </div>
                 </div>
             </section>
             <section className='offer'>

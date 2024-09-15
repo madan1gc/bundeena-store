@@ -15,23 +15,23 @@ class FuelSeeder extends Seeder
     {
         $data = [
             [
-                'title' => 'label1',
+                'title' => 'E10 Unleaded',
                 'price' => '10',
             ],
             [
-                'title' => 'label2',
+                'title' => 'Unleaded 91',
                 'price' => '10',
             ],
             [
-                'title' => 'label3',
+                'title' => 'Premium Unleaded 95',
                 'price' => '10',
             ],
             [
-                'title' => 'label4',
+                'title' => 'Diesel',
                 'price' => '10',
             ],
             [
-                'title' => 'label5',
+                'title' => 'LPG',
                 'price' => '10',
             ],
         ];

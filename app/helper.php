@@ -45,13 +45,11 @@
  }
 
  function formattedFuel($fuels){
-    $data = $fuels->map(function($fuels) {
-        return $fuels->map(function($fuel) {
+    $data = $fuels->map(function($fuel) {
             return [
                 'title' => $fuel->title,
                 'price' => $fuel->price,
             ];
-        });
     });
     return $data;
  }
