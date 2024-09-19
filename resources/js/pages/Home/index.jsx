@@ -7,11 +7,14 @@ import { cta } from '../../components/images';
 const Home = () => {
 
     const data = useProductData();
+
+    const price = data && data.fuels
+   
     const [showPrice, setShowPrice] = useState(true)
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 768) { 
+            if (window.innerWidth <= 768) {
                 setShowPrice(false);
             } else {
                 setShowPrice(true);
@@ -39,8 +42,6 @@ const Home = () => {
             .slice(-3)
             .reverse()
         : [];
-
-    const price = data && data.fuels
 
     const handlePriceClick = () => {
         setShowPrice(!showPrice)

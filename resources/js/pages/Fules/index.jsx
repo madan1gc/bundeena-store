@@ -6,14 +6,8 @@ const Fules = () => {
 
     const data = useProductData();
 
-    const fules = data && data.fuels && data.fuels.fuel
-        ? data.fuels.fuel
-            .filter(item => item.publish === 1)
-            .reverse()
-        : [];
-
-        console.log(fules);
-
+    const price = data && data.fuels
+    
     return (
         <div className="inner-page" >
             <section className="banner">
@@ -34,8 +28,12 @@ const Fules = () => {
                         heading="Current Fuel Promotions"
                         description="Get more from your fuel purchase"
                     />
-                    <div className="card-wrapper">
-                        <Card cardItem={fules} />
+                    <div className="card-wrapper price-card">
+                        {price ? (
+                            <Card cardItem={price} />
+                        ) : (
+                            <p>Loading price...</p>
+                        )}
                     </div>
                 </div>
             </section>
