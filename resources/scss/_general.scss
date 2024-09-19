@@ -123,7 +123,7 @@ a {
         // color: $font-color;
     }
 
-    &.white-button{
+    &.white-button {
         background-color: $white-color;
         color: $font-color;
     }
@@ -144,7 +144,7 @@ header {
         color: $white-color;
         font-size: 30px;
 
-        img{
+        img {
             width: 150px;
         }
     }
@@ -206,7 +206,7 @@ header {
                 }
             }
 
-            .store-category{
+            .store-category {
                 text-transform: capitalize;
             }
         }
@@ -265,6 +265,14 @@ header {
 
 .column-4 {
     grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 // footer

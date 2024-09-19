@@ -29,13 +29,10 @@
 
     .fuel-wrapper {
         position: fixed;
-        background-color: $primary-color;
-        bottom: 56px;
+        bottom: 32px;
         right: 20px;
         z-index: 99;
         color: $white-color;
-        border-radius: 8px;
-        box-shadow: 0 8px 34px 10px rgba(0, 0, 0, 0.2);
 
         .fuel-itemprice {
             display: flex;
@@ -43,7 +40,7 @@
             gap: 16px;
 
             &:not(:last-child) {
-                border-bottom: 2px solid #717171;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.5);
             }
 
             span {
@@ -61,6 +58,41 @@
             .price {
                 justify-content: flex-end;
                 font-family: $style-font;
+            }
+        }
+
+        .price-wrapper {
+            box-shadow: 0 8px 34px 10px rgba(0, 0, 0, 0.2);
+            background-color: $secondary-color;
+            border-radius: 8px;
+            animation: fadein 0.3s linear;
+        }
+
+        .icon {
+            box-shadow: 0 8px 34px 10px rgba(0, 0, 0, 0.2);
+            background-color: $secondary-color;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 100%;
+
+            svg {
+                display: block;
+            }
+        }
+
+        .close {
+            border: none;
+            position: absolute;
+            top: -20px;
+            right: 4px;
+            background-color: $secondary-color;
+            padding: 8px;
+            border-radius: 100%;
+            cursor: pointer;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+            svg {
+                display: block;
             }
         }
     }
@@ -267,5 +299,17 @@ section .button-wrapper {
     .slick-track {
         display: flex;
         gap: 30px;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0);
     }
 }
