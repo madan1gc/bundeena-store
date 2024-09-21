@@ -9,7 +9,6 @@
             <th>Image</th>
             <th>Title</th>
             <th>Desciption</th>
-            <th>Category</th>
             <th>Action</th>
         </tr>
         @foreach ($products as $product)
@@ -17,7 +16,6 @@
             <td><img src="{{ asset($product->getImage()) }}" style="height: 100px;width: 100px;"></td>
             <td>{{ $product->title }}</td>
             <td class="description">{{ $product->description }}</td>
-            <td>{{ $product->category }}</td>
             <td>
                 <div class="edit">
                     <form method="POST" action="{{ route('service.delete', ['id' => $product->id]) }}">

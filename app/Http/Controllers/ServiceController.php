@@ -24,7 +24,6 @@ class ServiceController extends Controller
         $data = [
             'title' => $request->title,
             'description' => $request->description,
-            'category' => $request->category,
             'publish' => false,
         ];
         $imageName=null;
@@ -69,7 +68,6 @@ class ServiceController extends Controller
         $data = [
             'title' => $request->title,
             'description' => $request->description,
-            'category' => $request->category,
         ];
         $imageName=null;
         if ($request->hasFile('image')) {

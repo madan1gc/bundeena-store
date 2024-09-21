@@ -14,7 +14,7 @@ class ApiController extends Controller
         $offers = ProductModel::all()->groupBy('category');
         $formattedOffers =  formatOffer($offers);
         
-        $services = Service::all()->groupBy('category');
+        $services = Service::all();
         $formattedServices =  formattedService($services);
         
         $stores = StoreModel::all()->groupBy('category');

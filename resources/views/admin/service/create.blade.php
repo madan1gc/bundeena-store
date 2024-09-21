@@ -31,10 +31,6 @@
                     <label>Image</label>
                     <input type="file" name="image">
                 </div>
-                <div class="input-wrapper">
-                    <label>Category</label>
-                    <input type="text" name="category">
-                </div>
                 <button>Submit</button>
             </form>
         </div>

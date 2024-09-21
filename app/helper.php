@@ -16,15 +16,13 @@
  }
 
  function formattedService($services){
-    $data = $services->map(function($services) {
-        return $services->map(function($service) {
+    $data = $services->map(function($service) {
             return [
                 'title' => $service->title,
                 'description' => $service->description,
                 'image' => $service->getImage(),
                 'publish' => $service->publish,
             ];
-        });
     });
     return $data;
  }
