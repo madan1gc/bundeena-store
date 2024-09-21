@@ -10,8 +10,6 @@ const AllStore = () => {
 
     const allItems = Object.values(storesData).flat().reverse();
 
-    console.log(allItems);
-
     return (
         <div className="inner-page" >
             <section className="banner">
