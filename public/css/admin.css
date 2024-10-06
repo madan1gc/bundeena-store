@@ -40,7 +40,7 @@ a {
 
 button,
 .primary-button {
-  background-color: #012F8D;
+  background-color: #f47524;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -60,30 +60,30 @@ button:hover,
 button.create,
 .primary-button.create {
   margin-bottom: 24px;
-  background-color: #EF1E21;
-  border: 1px solid #EF1E21;
+  background-color: #f47524;
+  border: 1px solid #f47524;
   color: #ffffff;
 }
 button.outline:not(.active),
 .primary-button.outline:not(.active) {
   background-color: transparent;
-  border: 1px solid #012F8D;
+  border: 1px solid #f47524;
   color: #333333;
 }
 button.outline:not(.active):hover,
 .primary-button.outline:not(.active):hover {
-  background-color: #012F8D;
+  background-color: #f47524;
   opacity: 1;
   color: #ffffff;
 }
 button.active,
 .primary-button.active {
-  background-color: #012F8D;
+  background-color: #f47524;
 }
 button.accent-button,
 .primary-button.accent-button {
   background-color: transparent;
-  border: 1px solid #EF1E21;
+  border: 1px solid #f47524;
   color: #333333;
 }
 
@@ -108,7 +108,7 @@ textarea {
 }
 input:focus,
 textarea:focus {
-  border: 1px solid #012F8D;
+  border: 1px solid #f47524;
 }
 
 form {
